@@ -1,175 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dashboard | JIU Student Portal</title>
-
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="css/dashboard.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard | JIU Student Portal</title>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="css/dashboard.css">
 </head>
-
 <body>
 
-    <!-- ── SIDEBAR ── -->
-    <aside class="sidebar">
-        <div class="sidebar-brand">
-            <div class="brand-logo">JIU</div>
-            <span class="brand-name">Student Portal</span>
+<!-- ── SIDEBAR ── -->
+<aside class="sidebar">
+  <div class="sidebar-brand">
+    <div class="brand-logo">JIU</div>
+    <span class="brand-name">Student Portal</span>
+  </div>
+
+  <!-- Wrapper yang bisa di-scroll tapi scrollbar-nya tidak terlihat -->
+  <div class="sidebar-nav-wrapper">
+    <nav class="sidebar-nav">
+      <!-- Bentuk Active kini berupa kotak melengkung persis seperti di gambar -->
+      <a href="dashboard.html" class="nav-item active">
+        <i class="fas fa-house"></i> Dashboard
+      </a>
+
+      <div class="nav-section-label">Academics</div>
+      <a href="calendar/calendar.html" class="nav-item"><i class="fas fa-calendar-days"></i> Calendar</a>
+      <a href="academics/academics.html" class="nav-item"><i class="fas fa-graduation-cap"></i> Academics</a>
+      <a href="department/department.html" class="nav-item"><i class="fas fa-building-columns"></i> Department</a>
+
+      <div class="nav-section-label">Finance</div>
+      <a href="cost_of_attandance/cost_of_attandance.html" class="nav-item"><i class="fas fa-coins"></i> Cost of Attendance</a>
+
+      <div class="nav-section-label">Campus Life</div>
+      <a href="student_affairs/student_affairs.html" class="nav-item"><i class="fas fa-users"></i> Student Affairs</a>
+      <a href="external_activities/external_activities.html" class="nav-item"><i class="fas fa-globe"></i> External Activities</a>
+      <a href="student_services/student_services.html" class="nav-item"><i class="fas fa-headset"></i> Student Services</a>
+    </nav>
+  </div>
+
+  <div class="sidebar-bottom">
+    <div class="sidebar-settings">
+      <i class="fas fa-gear"></i> Settings
+    </div>
+    <div class="sidebar-user">
+      <div class="user-avatar">FP</div>
+      <div class="user-info">
+        <div class="user-name">Firman Purba</div>
+        <div class="user-id">ID: 2023001</div>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<!-- ── MAIN CONTENT ── -->
+<main class="main">
+  
+  <!-- Hero Banner -->
+  <div class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <!-- Menggunakan "Firman!" agar tetap personal untuk portofoliomu -->
+      <h1>Welcome back, Firman!</h1>
+      <p>-Access Your academic life, simplified.</p>
+    </div>
+  </div>
+
+  <div class="intro-text">
+    Welcome to the Student Information Portal. This is your central hub for essential school resources. Use this site to access your <strong>curriculum</strong>, academic policies, and dormitory regulations, or to explore our diverse academic programs.
+  </div>
+
+  <div class="content-grid">
+    <!-- Kiri: Stats & Announcements -->
+    <div class="left-col">
+      <div class="stats-row">
+        <div class="stat-card">
+          <i class="fas fa-users"></i>
+          <span class="stat-label">Students</span>
+          <span class="stat-value">5,699</span>
+        </div>
+        <div class="stat-card">
+          <i class="fas fa-graduation-cap"></i>
+          <span class="stat-label">Lecturers</span>
+          <span class="stat-value">297</span>
+        </div>
+      </div>
+
+      <div class="section-header">
+        <div class="section-title"><i class="fas fa-bullhorn"></i> Recent Announcements</div>
+        <a href="#" class="view-all">View all</a>
+      </div>
+
+      <div class="card announcement-card">
+        <div class="announcement-item">
+          <div class="announcement-title">Fall 2024 Registration Guidelines</div>
+          <div class="announcement-body">Registration for the Fall 2024 semester begins next Monday. Please review your degree audit and consult with your advisor before selecting...</div>
+          <div class="announcement-meta">
+            <i class="far fa-calendar"></i> Oct 24, 2023 <span class="meta-dot">•</span> Academic Affairs
+          </div>
         </div>
 
-        <!-- Wrapper yang bisa di-scroll tapi scrollbar-nya tidak terlihat -->
-        <div class="sidebar-nav-wrapper">
-            <nav class="sidebar-nav">
-                <!-- Bentuk Active kini berupa kotak melengkung persis seperti di gambar -->
-                <a href="dashboard.html" class="nav-item active">
-                    <i class="fas fa-house"></i> Dashboard
-                </a>
-
-                <div class="nav-section-label">Academics</div>
-                <a href="calendar/calendar.html" class="nav-item"><i class="fas fa-calendar-days"></i> Calendar</a>
-                <a href="academics/academics.html" class="nav-item"><i class="fas fa-graduation-cap"></i> Academics</a>
-                <a href="department/department.html" class="nav-item"><i class="fas fa-building-columns"></i>
-                    Department</a>
-
-                <div class="nav-section-label">Finance</div>
-                <a href="cost_of_attandance/cost_of_attandance.html" class="nav-item"><i class="fas fa-coins"></i> Cost
-                    of Attendance</a>
-
-                <div class="nav-section-label">Campus Life</div>
-                <a href="student_affairs/student_affairs.html" class="nav-item"><i class="fas fa-users"></i> Student
-                    Affairs</a>
-                <a href="external_activities/external_activities.html" class="nav-item"><i class="fas fa-globe"></i>
-                    External Activities</a>
-                <a href="student_services/student_services.html" class="nav-item"><i class="fas fa-headset"></i> Student
-                    Services</a>
-            </nav>
+        <div class="announcement-item" style="margin-top: 24px;">
+          <div class="announcement-title">Library Hours Extended for Finals</div>
+          <div class="announcement-body">The main library will be open 24/7 starting December 1st to support students during finals week. Study rooms can be booked online.</div>
+          <div class="announcement-meta">
+            <i class="far fa-calendar"></i> Oct 22, 2023 <span class="meta-dot">•</span> Library Services
+          </div>
         </div>
+      </div>
+    </div>
 
-        <div class="sidebar-bottom">
-            <div class="sidebar-settings">
-                <i class="fas fa-gear"></i> Settings
-            </div>
-            <div class="sidebar-user">
-                <div class="user-avatar">FP</div>
-                <div class="user-info">
-                    <div class="user-name">Firman Purba</div>
-                    <div class="user-id">ID: 2023001</div>
-                </div>
-            </div>
+    <!-- Kanan: Quick Links & Upcoming -->
+    <div class="right-col">
+      <div class="section-header">
+        <div class="section-title"><i class="fas fa-link"></i> Quick Links</div>
+      </div>
+      <div class="card quick-links-card">
+        <div class="quick-links-grid">
+          <div class="quick-link-item"><i class="fas fa-envelope"></i><span>Webmail</span></div>
+          <div class="quick-link-item"><i class="fas fa-book"></i><span>Library</span></div>
+          <div class="quick-link-item"><i class="fas fa-globe"></i><span>Website</span></div>
+          <div class="quick-link-item"><i class="fas fa-file-lines"></i><span>SIAKAD</span></div>
         </div>
-    </aside>
+      </div>
 
-    <!-- ── MAIN CONTENT ── -->
-    <main class="main">
-
-        <!-- Hero Banner -->
-        <div class="hero">
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <!-- Menggunakan "Firman!" agar tetap personal untuk portofoliomu -->
-                <h1>Welcome back, Firman!</h1>
-                <p>-Access Your academic life, simplified.</p>
-            </div>
+      <div class="section-header" style="margin-top: 30px;">
+        <div class="section-title"><i class="far fa-calendar-check"></i> Upcoming</div>
+      </div>
+      <div class="card upcoming-card">
+        <div class="event-item">
+          <div class="event-date">
+            <span class="event-month">MAR</span>
+            <span class="event-day">25</span>
+          </div>
+          <div class="event-info">
+            <div class="event-name">Career Fair</div>
+            <div class="event-loc">10:00 AM • Student Center</div>
+          </div>
         </div>
-
-        <div class="intro-text">
-            Welcome to the Student Information Portal. This is your central hub for essential school resources. Use this
-            site to access your <strong>curriculum</strong>, academic policies, and dormitory regulations, or to explore
-            our diverse academic programs.
+        <div class="divider"></div>
+        <div class="event-item">
+          <div class="event-date">
+            <span class="event-month">MAR</span>
+            <span class="event-day">31</span>
+          </div>
+          <div class="event-info">
+            <div class="event-name">Halloween Mixer</div>
+            <div class="event-loc">07:00 PM • Main Quad</div>
+          </div>
         </div>
-
-        <div class="content-grid">
-            <!-- Kiri: Stats & Announcements -->
-            <div class="left-col">
-                <div class="stats-row">
-                    <div class="stat-card">
-                        <i class="fas fa-users"></i>
-                        <span class="stat-label">Students</span>
-                        <span class="stat-value">5,699</span>
-                    </div>
-                    <div class="stat-card">
-                        <i class="fas fa-graduation-cap"></i>
-                        <span class="stat-label">Lecturers</span>
-                        <span class="stat-value">297</span>
-                    </div>
-                </div>
-
-                <div class="section-header">
-                    <div class="section-title"><i class="fas fa-bullhorn"></i> Recent Announcements</div>
-                    <a href="#" class="view-all">View all</a>
-                </div>
-
-                <div class="card announcement-card">
-                    <div class="announcement-item">
-                        <div class="announcement-title">Fall 2024 Registration Guidelines</div>
-                        <div class="announcement-body">Registration for the Fall 2024 semester begins next Monday.
-                            Please review your degree audit and consult with your advisor before selecting...</div>
-                        <div class="announcement-meta">
-                            <i class="far fa-calendar"></i> Oct 24, 2023 <span class="meta-dot">•</span> Academic
-                            Affairs
-                        </div>
-                    </div>
-
-                    <div class="announcement-item" style="margin-top: 24px;">
-                        <div class="announcement-title">Library Hours Extended for Finals</div>
-                        <div class="announcement-body">The main library will be open 24/7 starting December 1st to
-                            support students during finals week. Study rooms can be booked online.</div>
-                        <div class="announcement-meta">
-                            <i class="far fa-calendar"></i> Oct 22, 2023 <span class="meta-dot">•</span> Library
-                            Services
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Kanan: Quick Links & Upcoming -->
-            <div class="right-col">
-                <div class="section-header">
-                    <div class="section-title"><i class="fas fa-link"></i> Quick Links</div>
-                </div>
-                <div class="card quick-links-card">
-                    <div class="quick-links-grid">
-                        <div class="quick-link-item"><i class="fas fa-envelope"></i><span>Webmail</span></div>
-                        <div class="quick-link-item"><i class="fas fa-book"></i><span>Library</span></div>
-                        <div class="quick-link-item"><i class="fas fa-globe"></i><span>Website</span></div>
-                        <div class="quick-link-item"><i class="fas fa-file-lines"></i><span>SIAKAD</span></div>
-                    </div>
-                </div>
-
-                <div class="section-header" style="margin-top: 30px;">
-                    <div class="section-title"><i class="far fa-calendar-check"></i> Upcoming</div>
-                </div>
-                <div class="card upcoming-card">
-                    <div class="event-item">
-                        <div class="event-date">
-                            <span class="event-month">MAR</span>
-                            <span class="event-day">25</span>
-                        </div>
-                        <div class="event-info">
-                            <div class="event-name">Career Fair</div>
-                            <div class="event-loc">10:00 AM • Student Center</div>
-                        </div>
-                    </div>
-                    <div class="divider"></div>
-                    <div class="event-item">
-                        <div class="event-date">
-                            <span class="event-month">MAR</span>
-                            <span class="event-day">31</span>
-                        </div>
-                        <div class="event-info">
-                            <div class="event-name">Halloween Mixer</div>
-                            <div class="event-loc">07:00 PM • Main Quad</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+      </div>
+    </div>
+  </div>
+</main>
 
 </body>
-
 </html>
