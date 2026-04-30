@@ -1,0 +1,88 @@
+/* ============================================================
+   responsive.css — Mobile & Responsive Styles
+   JIU Student Portal
+   ============================================================ */
+
+/* ── Mobile Hamburger Button ── */
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  z-index: 200;
+  background: var(--accent);
+  border: none;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: white;
+  font-size: 16px;
+  box-shadow: var(--shadow-md);
+}
+
+/* ── Dark Overlay (mobile sidebar) ── */
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 90;
+}
+
+/* ── Tablet (<= 900px) ── */
+@media (max-width: 900px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .right-col {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .quick-links-card,
+  .upcoming-card {
+    flex: 1 1 280px;
+  }
+}
+
+/* ── Mobile (<= 680px) ── */
+@media (max-width: 680px) {
+  /* Sidebar hides off-screen by default */
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  /* Main shifts to full width */
+  .main {
+    margin-left: 0;
+    padding: 68px 16px 20px;
+  }
+
+  /* Show hamburger */
+  .hamburger {
+    display: flex;
+  }
+
+  /* Show overlay when active */
+  .overlay.show {
+    display: block;
+  }
+
+  /* Smaller hero title */
+  .hero-content h1 {
+    font-size: 22px;
+  }
+
+  /* Wrap stats */
+  .stats-row {
+    flex-wrap: wrap;
+  }
+}
