@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | JIU Student Portal</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <!-- Boxicons for Professional Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <img src="assets/images/jiu-logo-rounded.png" alt="Logo" class="sidebar-logo">
+                <h3>JIU Student Portal</h3>
+            </div>
+
+            <nav class="sidebar-nav">
+                <div class="nav-section">
+                    <a href="dashboard.html" class="nav-item active">
+                        <i class='bx bxs-dashboard'></i> Dashboard
+                    </a>
+                </div>
+
+                <div class="nav-section">
+                    <span class="section-title">ACADEMICS</span>
+                    <a href="calendar/calendar.html" class="nav-item"><i class='bx bx-calendar'></i> Calendar</a>
+                    <a href="academics/academics.html" class="nav-item"><i class='bx bx-book-open'></i> Academics</a>
+                    <a href="department/department.html" class="nav-item"><i class='bx bx-buildings'></i> Department</a>
+                </div>
+
+                <div class="nav-section">
+                    <span class="section-title">FINANCE</span>
+                    <a href="cost_of_attandance/cost_of_attandance.html" class="nav-item"><i class='bx bx-wallet'></i> Cost of Attendance</a>
+                </div>
+
+                <div class="nav-section">
+                    <span class="section-title">CAMPUS LIFE</span>
+                    <a href="student_affairs/student_affairs.html" class="nav-item"><i class='bx bx-group'></i> Student Affairs</a>
+                    <a href="external_activities/external_activities.html" class="nav-item"><i class='bx bx-globe'></i> External Activities</a>
+                    <a href="student_services/student_services.html" class="nav-item"><i class='bx bx-support'></i> Student Services</a>
+                </div>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="settings/settings.html" class="nav-item"><i class='bx bx-cog'></i> Settings</a>
+                <div class="user-profile">
+                    <div class="user-avatar">FP</div>
+                    <div class="user-info">
+                        <span class="user-name">Firman Purba</span>
+                        <span class="user-id">ID: 2023001</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <div class="welcome-banner">
+                <div class="banner-overlay">
+                    <h1>Welcome back, Firman!</h1>
+                    <p>Access your academic life, simplified.</p>
+                </div>
+            </div>
+
+            <div class="intro-description">
+                <p>Welcome to the Student Information Portal. This is your central hub for essential school resources. Use this site to access your <strong>curriculum</strong>, academic policies, and dormitory regulations, or to explore our diverse academic programs.</p>
+            </div>
+
+            <section class="dashboard-grid">
+                <!-- Left Content: Stats & Announcements -->
+                <div class="grid-left">
+                    <div class="stats-row">
+                        <div class="stat-card">
+                            <i class='bx bx-group'></i>
+                            <div class="stat-data">
+                                <span>Students</span>
+                                <strong>5,699</strong>
+                            </div>
+                        </div>
+                        <div class="stat-card">
+                            <i class='bx bx-user-voice'></i>
+                            <div class="stat-data">
+                                <span>Lecturers</span>
+                                <strong>297</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card announcement-card">
+                        <div class="card-header">
+                            <h2><i class='bx bxs-megaphone'></i> Recent Announcements</h2>
+                            <a href="#" class="view-all">View all</a>
+                        </div>
+                        <div class="announcement-list">
+                            <div class="announcement-item">
+                                <h3>Fall 2024 Registration Guidelines</h3>
+                                <p>Registration for the Fall 2024 semester begins next Monday. Please review your degree audit and consult with your advisor...</p>
+                                <div class="meta">
+                                    <span><i class='bx bx-calendar'></i> Oct 24, 2023</span>
+                                    <span>• Academic Affairs</span>
+                                </div>
+                            </div>
+                            <div class="announcement-item">
+                                <h3>Library Hours Extended for Finals</h3>
+                                <p>The main library will be open 24/7 starting December 1st to support students during finals week...</p>
+                                <div class="meta">
+                                    <span><i class='bx bx-calendar'></i> Oct 22, 2023</span>
+                                    <span>• Library Services</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content: Quick Links & Events -->
+                <div class="grid-right">
+                    <div class="card quick-links">
+                        <div class="card-header">
+                            <h2><i class='bx bx-link-alt'></i> Quick Links</h2>
+                        </div>
+                        <div class="links-grid">
+                            <a href="#" class="link-box"><i class='bx bx-envelope'></i> Webmail</a>
+                            <a href="#" class="link-box"><i class='bx bx-library'></i> Library</a>
+                            <a href="#" class="link-box"><i class='bx bx-globe'></i> Website</a>
+                            <a href="#" class="link-box"><i class='bx bx-desktop'></i> SIAKAD</a>
+                        </div>
+                    </div>
+
+                    <div class="card upcoming-events">
+                        <div class="card-header">
+                            <h2><i class='bx bx-calendar-event'></i> Upcoming</h2>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date">MAR <strong>25</strong></div>
+                            <div class="event-detail">
+                                <h4>Career Fair</h4>
+                                <p>10:00 AM • Student Center</p>
+                            </div>
+                        </div>
+                        <div class="event-item">
+                            <div class="event-date highlight">MAR <strong>31</strong></div>
+                            <div class="event-detail">
+                                <h4>Halloween Mixer</h4>
+                                <p>07:00 PM • Main Quad</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
