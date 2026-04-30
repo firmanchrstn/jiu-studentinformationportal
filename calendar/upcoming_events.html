@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Upcoming Events | JIU Student Portal</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/calendar.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <img src="../assets/images/jiu-logo-rounded.png" alt="JIU Logo" class="brand-logo">
+            <span class="brand-name">Student Portal</span>
+        </div>
+
+        <div class="sidebar-nav-wrapper">
+            <nav class="sidebar-nav">
+                <a href="../dashboard.html" class="nav-item"><i class="fas fa-house"></i> Dashboard</a>
+
+                <div class="nav-section-label">Academics</div>
+                <a href="calendar.html" class="nav-item active"><i class="fas fa-calendar-days"></i> Calendar</a>
+                <a href="../academics/academics.html" class="nav-item"><i class="fas fa-graduation-cap"></i>
+                    Academics</a>
+                <a href="../department/department.html" class="nav-item"><i class="fas fa-building-columns"></i>
+                    Department</a>
+
+                <div class="nav-section-label">Finance</div>
+                <a href="../cost_of_attandance/cost_of_attandance.html" class="nav-item"><i class="fas fa-coins"></i>
+                    Cost of Attendance</a>
+
+                <div class="nav-section-label">Campus Life</div>
+                <a href="../student_affairs/student_affairs.html" class="nav-item"><i class="fas fa-users"></i> Student
+                    Affairs</a>
+                <a href="../external_activities/external_activities.html" class="nav-item"><i class="fas fa-globe"></i>
+                    External Activities</a>
+                <a href="../student_services/student_services.html" class="nav-item"><i class="fas fa-headset"></i>
+                    Student Services</a>
+            </nav>
+        </div>
+
+        <div class="sidebar-bottom">
+            <a href="../settings/general.html" class="sidebar-settings">
+                <i class="fas fa-gear"></i> Settings
+            </a>
+            <div class="sidebar-user">
+                <div class="user-avatar">FP</div>
+                <div class="user-info">
+                    <div class="user-name">Firman Purba</div>
+                    <div class="user-id">ID: 2023001</div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main calendar-page">
+        <!-- Sticky Hero Wrapper -->
+        <div class="hero-wrapper">
+            <div class="hero">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1>Welcome back, Firman!</h1>
+                    <p>-Access Your academic life, simplified.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Breadcrumb Bar dengan nesting -->
+        <div class="breadcrumb-bar">
+            <i class="fas fa-calendar-alt" style="font-size: 16px;"></i>
+            <a href="calendar.html">Academic Calendar</a>
+            <i class="fas fa-chevron-right"></i>
+            <span class="active">Upcoming Events</span>
+        </div>
+
+        <!-- Full Width Layout -->
+        <div class="full-width-container">
+            <div class="card" style="padding: 32px 40px;">
+                <div class="section-title" style="margin-bottom: 30px;">Upcoming Events</div>
+
+                <div class="event-list" style="gap: 30px;">
+
+                    <div class="event-card-item"
+                        onclick="openEventModal('AI Ethics Seminar', 'March 14, 2026', '2:00 PM - 4:00 PM', 'Auditorium Hall A, JIU Campus', 'Join us for an in-depth discussion on the ethical implications of Artificial Intelligence in modern software development. Keynote speaker: Prof. Dr. Budi Santoso.', 'purple')">
+                        <div class="event-date-box event-purple-box">
+                            <span class="month">MAR</span><span class="day">14</span>
+                        </div>
+                        <div class="event-details">
+                            <div class="title">AI Ethics Seminar</div>
+                            <div class="meta">2:00 PM • Hall A</div>
+                        </div>
+                    </div>
+
+                    <div class="event-card-item"
+                        onclick="openEventModal('Career Fair 2026', 'March 18, 2026', '10:00 AM - 3:00 PM', 'Main Campus Plaza', 'Connect with top tech companies looking for interns and graduates. Bring your updated CV!', 'blue')">
+                        <div class="event-date-box event-blue-box">
+                            <span class="month">MAR</span><span class="day">18</span>
+                        </div>
+                        <div class="event-details">
+                            <div class="title">Career Fair 2026</div>
+                            <div class="meta">10:00 AM • Plaza</div>
+                        </div>
+                    </div>
+
+                    <div class="event-card-item"
+                        onclick="openEventModal('HackerThon Kickoff', 'March 25, 2026', '6:30 PM - 8:30 PM', 'Computer Lab 404', 'The opening ceremony for the annual JIU HackerThon. Form your teams and get coding!', 'purple')">
+                        <div class="event-date-box event-purple-box">
+                            <span class="month">MAR</span><span class="day">25</span>
+                        </div>
+                        <div class="event-details">
+                            <div class="title">HackerThon Kickoff</div>
+                            <div class="meta">6:30 PM • Lab 404</div>
+                        </div>
+                    </div>
+
+                    <div class="event-card-item"
+                        onclick="openEventModal('Career Fair', 'March 25, 2026', '10:00 AM - 4:00 PM', 'Student Center', 'Day 2 of the Career Fair focusing on business and arts majors.', 'purple')">
+                        <div class="event-date-box event-purple-box">
+                            <span class="month">MAR</span><span class="day">25</span>
+                        </div>
+                        <div class="event-details">
+                            <div class="title">Career Fair</div>
+                            <div class="meta">10:00 AM • Student Center</div>
+                        </div>
+                    </div>
+
+                    <div class="event-card-item"
+                        onclick="openEventModal('Halloween Mixer', 'March 31, 2026', '7:00 PM - 10:00 PM', 'Main Quad', 'Join the student council for an early Halloween mixer. Costumes encouraged!', 'purple')">
+                        <div class="event-date-box event-purple-box">
+                            <span class="month">MAR</span><span class="day">31</span>
+                        </div>
+                        <div class="event-details">
+                            <div class="title">Halloween Mixer</div>
+                            <div class="meta">07:00 PM • Main Quad</div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- ── KERANGKA HTML MODAL (Diletakkan di luar main) ── -->
+    <div class="modal-overlay" id="event-modal">
+        <div class="modal-container">
+            <div class="modal-header">
+                <div class="modal-title-area">
+                    <h3 id="modal-title">Event Title</h3>
+                    <span id="modal-badge" class="modal-badge badge-purple">Category</span>
+                </div>
+                <button class="btn-close" onclick="closeEventModal()"><i class="fas fa-times"></i></button>
+            </div>
+
+            <div class="modal-body">
+                <div class="info-row">
+                    <i class="far fa-calendar-alt"></i>
+                    <div class="info-content">
+                        <span class="info-label">Date</span>
+                        <span class="info-value" id="modal-date">Date</span>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <i class="far fa-clock"></i>
+                    <div class="info-content">
+                        <span class="info-label">Time</span>
+                        <span class="info-value" id="modal-time">Time</span>
+                    </div>
+                </div>
+                <div class="info-row">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <div class="info-content">
+                        <span class="info-label">Location</span>
+                        <span class="info-value" id="modal-location">Location</span>
+                    </div>
+                </div>
+
+                <div class="modal-desc" id="modal-desc">
+                    Event description goes here.
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-outline" onclick="closeEventModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- LETAKKAN SCRIPT MODAL DI SINI -->
+    <script>
+        function openEventModal(title, date, time, location, desc, colorType) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-date').innerText = date;
+            document.getElementById('modal-time').innerText = time;
+            document.getElementById('modal-location').innerText = location;
+            document.getElementById('modal-desc').innerText = desc;
+
+            const badge = document.getElementById('modal-badge');
+            badge.className = 'modal-badge';
+            if (colorType === 'purple') {
+                badge.classList.add('badge-purple');
+                badge.innerText = 'Exams / Seminar';
+            } else if (colorType === 'blue') {
+                badge.classList.add('badge-blue');
+                badge.innerText = 'University Event';
+            }
+
+            document.getElementById('event-modal').classList.add('active');
+        }
+
+        function closeEventModal() {
+            document.getElementById('event-modal').classList.remove('active');
+        }
+
+        document.getElementById('event-modal').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeEventModal();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

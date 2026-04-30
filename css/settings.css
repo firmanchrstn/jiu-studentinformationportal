@@ -1,0 +1,593 @@
+/* ── Settings Header ── */
+.settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.settings-header h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+}
+
+.settings-header p {
+    font-size: 15px;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.settings-actions {
+    display: flex;
+    gap: 16px;
+}
+
+/* ── Professional Buttons ── */
+.btn {
+    padding: 12px 24px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: #5c5fa3;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(92, 95, 163, 0.2);
+}
+
+.btn-primary:hover {
+    background: #4a4e8a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(92, 95, 163, 0.3);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid #d1d5db;
+    color: var(--text-main);
+}
+
+.btn-outline:hover {
+    background: #f9fafb;
+    border-color: #9ca3af;
+}
+
+/* ── Settings Container (Nested Layout) ── */
+.settings-container {
+    display: flex;
+    background: #ffffff;
+    border-radius: 20px;
+    min-height: 650px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
+    border: 1px solid #f3f4f6;
+    overflow: hidden;
+}
+
+/* ── Secondary Sidebar ── */
+.settings-sidebar {
+    width: 280px;
+    background: #fafafa;
+    /* Sedikit beda warna dengan content untuk hierarki */
+    border-right: 1px solid #f3f4f6;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.settings-link {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 18px;
+    text-decoration: none;
+    color: #6b7280;
+    font-size: 14.5px;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.settings-link i {
+    width: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.settings-link:hover {
+    background: #f3f4f6;
+    color: var(--text-main);
+}
+
+.settings-link.active {
+    background: #f3f0ff;
+    color: #5c5fa3;
+    font-weight: 700;
+}
+
+/* ── Settings Content Area ── */
+.settings-content {
+    flex: 1;
+    padding: 40px 48px;
+    background: #ffffff;
+}
+
+.content-header {
+    margin-bottom: 32px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.content-header h2 {
+    font-size: 22px;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 6px;
+    letter-spacing: -0.3px;
+}
+
+.content-header p {
+    font-size: 14.5px;
+    color: var(--text-muted);
+}
+
+.section-title-small {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: var(--text-main);
+}
+
+/* ── Profile Upload Row ── */
+.form-section {
+    margin-bottom: 48px;
+}
+
+.profile-upload-row {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    padding: 24px;
+    border: 1px solid #f3f4f6;
+    border-radius: 16px;
+    background: #fafafa;
+}
+
+.profile-avatar-large {
+    width: 88px;
+    height: 88px;
+    background: #e5e7eb;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    color: #9ca3af;
+    position: relative;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.upload-badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: #5c5fa3;
+    color: #ffffff;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    border: 3px solid #ffffff;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.upload-badge:hover {
+    transform: scale(1.1);
+    background: #4a4e8a;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-name {
+    font-weight: 800;
+    font-size: 17px;
+    margin-bottom: 6px;
+    color: var(--text-main);
+}
+
+.profile-role {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+}
+
+.profile-loc {
+    font-size: 13px;
+    color: #9ca3af;
+    font-weight: 500;
+}
+
+/* ── Modern Form Grid ── */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 32px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-group label {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #4b5563;
+}
+
+.form-group input,
+.form-group select {
+    padding: 14px 18px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 14.5px;
+    font-weight: 500;
+    color: var(--text-main);
+    background-color: #ffffff;
+    transition: all 0.25s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+.form-group input::placeholder {
+    color: #9ca3af;
+    font-weight: 400;
+}
+
+/* Hover & Focus States */
+.form-group input:hover:not([readonly]),
+.form-group select:hover {
+    border-color: #d1d5db;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #5c5fa3;
+    box-shadow: 0 0 0 4px rgba(92, 95, 163, 0.15);
+    background-color: #ffffff;
+}
+
+/* Styling Khusus Input yang Dikunci (Email & NIM) */
+.form-group input[readonly] {
+    background-color: #f3f4f6;
+    color: #6b7280;
+    border-color: #e5e7eb;
+    cursor: not-allowed;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.form-group input[readonly]:focus {
+    box-shadow: none;
+    border-color: #e5e7eb;
+}
+
+/* ── Responsive Settings ── */
+@media (max-width: 992px) {
+    .settings-container {
+        flex-direction: column;
+    }
+
+    .settings-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #f3f4f6;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 20px;
+    }
+
+    .settings-link {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .settings-content {
+        padding: 30px 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .profile-upload-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .profile-actions {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .profile-actions .btn {
+        flex: 1;
+    }
+
+    .settings-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .settings-actions {
+        width: 100%;
+    }
+
+    .settings-actions .btn {
+        flex: 1;
+    }
+}
+
+/* ── KUNCI LAYOUT (SCROLL MAGIC) ── */
+body {
+    overflow: hidden;
+    /* Mengunci body agar tidak double-scroll */
+}
+
+.main.settings-page {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px 30px 0;
+    overflow: hidden;
+}
+
+/* ── TOP BAR FIX ── */
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    flex-shrink: 0;
+    /* Mencegah top-bar mengecil */
+    width: 100%;
+}
+
+.search-box {
+    position: relative;
+    width: 350px;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 12px 16px 12px 40px;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    color: var(--text-main);
+    font-size: 14px;
+}
+
+.search-box i {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+}
+
+.top-bar-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.user-avatar-small {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #6b6fa0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.icon-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: 1px solid #e5e7eb;
+    background: white;
+    color: #6b7280;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.badge {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    background: #e74c3c;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ── SETTINGS HEADER FIX ── */
+.settings-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+    flex-shrink: 0;
+    /* Mengunci agar tidak ikut tergulung */
+}
+
+/* ── SETTINGS CONTAINER (SCROLL HANDLER) ── */
+.settings-container {
+    display: flex;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
+    border: 1px solid #f3f4f6;
+    flex: 1;
+    /* Mengisi sisa layar */
+
+    /* RAHASIANYA DI SINI: Hapus min-height: 650px dan ganti dengan 0 */
+    min-height: 0;
+    overflow: hidden;
+}
+
+/* Sidebar Settings Tetap */
+.settings-sidebar {
+    width: 280px;
+    background: #fafafa;
+    border-right: 1px solid #f3f4f6;
+    padding: 32px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    overflow-y: auto;
+    /* Bisa di-scroll jika menu terlalu banyak */
+}
+
+/* ── AREA FORMULIR YANG BISA DI-SCROLL ── */
+.settings-content {
+    flex: 1;
+    padding: 40px 48px;
+    background: #ffffff;
+    overflow-y: auto;
+    /* Scroll aktif di sini */
+    padding-bottom: 40px;
+    /* Cukup 40px agar pas sampai dasar */
+}
+
+@media (max-width: 992px) {
+    .settings-container {
+        flex-direction: column;
+    }
+
+    .settings-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #f3f4f6;
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 16px 20px;
+    }
+
+    .settings-link {
+        white-space: nowrap;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* Kembalikan sifat asli website saat di layar HP */
+    body {
+        overflow: auto;
+    }
+
+    .main.settings-page {
+        height: auto;
+        padding: 80px 20px 30px;
+        overflow: visible;
+    }
+
+    .settings-container {
+        overflow: visible;
+    }
+
+    .settings-content {
+        overflow-y: visible;
+        padding: 30px 20px;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .profile-upload-row {
+        flex-direction: column;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .profile-actions {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .profile-actions .btn {
+        flex: 1;
+    }
+
+    .settings-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .settings-actions {
+        width: 100%;
+    }
+
+    .settings-actions .btn {
+        flex: 1;
+    }
+}
+
+/* Custom Webkit Scrollbar agar elegan */
+.settings-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.settings-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.settings-content::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 10px;
+}
+
+.settings-content::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings - Security | JIU Student Portal</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/settings.css">
+</head>
+
+<body>
+
+    <!-- ── MAIN SIDEBAR JIU ── -->
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <img src="../assets/images/jiu-logo-rounded.png" alt="JIU Logo" class="brand-logo">
+            <span class="brand-name">Student Portal</span>
+        </div>
+
+        <div class="sidebar-nav-wrapper">
+            <nav class="sidebar-nav">
+                <a href="../dashboard.html" class="nav-item"><i class="fas fa-house"></i> Dashboard</a>
+
+                <div class="nav-section-label">Academics</div>
+                <a href="../calendar/calendar.html" class="nav-item"><i class="fas fa-calendar-days"></i> Calendar</a>
+                <a href="../academics/academics.html" class="nav-item"><i class="fas fa-graduation-cap"></i>
+                    Academics</a>
+                <a href="../department/department.html" class="nav-item"><i class="fas fa-building-columns"></i>
+                    Department</a>
+
+                <div class="nav-section-label">Finance</div>
+                <a href="../cost_of_attandance/cost_of_attandance.html" class="nav-item"><i class="fas fa-coins"></i>
+                    Cost of Attendance</a>
+
+                <div class="nav-section-label">Campus Life</div>
+                <a href="../student_affairs/student_affairs.html" class="nav-item"><i class="fas fa-users"></i> Student
+                    Affairs</a>
+                <a href="../external_activities/external_activities.html" class="nav-item"><i class="fas fa-globe"></i>
+                    External Activities</a>
+                <a href="../student_services/student_services.html" class="nav-item"><i class="fas fa-headset"></i>
+                    Student Services</a>
+            </nav>
+        </div>
+
+        <div class="sidebar-bottom">
+            <a href="general.html" class="sidebar-settings active">
+                <i class="fas fa-gear"></i> Settings
+            </a>
+            <div class="sidebar-user">
+                <div class="user-avatar">FP</div>
+                <div class="user-info">
+                    <div class="user-name">Firman Purba</div>
+                    <div class="user-id">ID: 2023001</div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ── MAIN CONTENT ── -->
+    <main class="main settings-page">
+
+        <!-- Utility Top Bar -->
+        <header class="top-bar">
+            <div class="search-box">
+                <i class="fas fa-search"></i>
+                <input type="text" placeholder="Search settings...">
+            </div>
+            <div class="top-bar-actions">
+                <button class="icon-btn"><i class="fas fa-bell"></i><span class="badge">3</span></button>
+                <div class="user-avatar-small">FP</div>
+            </div>
+        </header>
+
+        <!-- Settings Header -->
+        <div class="settings-header">
+            <div class="header-titles">
+                <h1>Settings</h1>
+                <p>Manage your account settings and preferences.</p>
+            </div>
+            <div class="settings-actions">
+                <button class="btn btn-outline">Cancel</button>
+                <button class="btn btn-primary">Save Changes</button>
+            </div>
+        </div>
+
+        <!-- Settings Layout -->
+        <div class="settings-container">
+
+            <!-- Secondary Sidebar -->
+            <aside class="settings-sidebar">
+                <a href="general.html" class="settings-link"><i class="fas fa-info-circle"></i> General Information</a>
+                <a href="preferences.html" class="settings-link"><i class="fas fa-sliders-h"></i> Preferences</a>
+
+                <!-- Class ACTIVE dipindah ke Security -->
+                <a href="security.html" class="settings-link active"><i class="fas fa-shield-alt"></i> Security</a>
+
+                <a href="notifications.html" class="settings-link"><i class="far fa-bell"></i> Notifications</a>
+                <a href="account.html" class="settings-link"><i class="far fa-user"></i> Account</a>
+                <a href="manager.html" class="settings-link"><i class="fas fa-user-cog"></i> Account Manager</a>
+            </aside>
+
+            <!-- Content Form -->
+            <div class="settings-content">
+                <div class="content-header">
+                    <h2>Security</h2>
+                    <p>Manage your password and secure your portal account.</p>
+                </div>
+
+                <!-- Password Change Section -->
+                <div class="form-section">
+                    <h3 class="section-title-small">Change Password</h3>
+                    <div class="form-grid">
+                        <!-- Sengaja dibuat 1 kolom penuh agar tampilannya lega -->
+                        <div class="form-group" style="grid-column: 1 / -1;">
+                            <label>Current Password</label>
+                            <input type="password" placeholder="Enter your current password">
+                        </div>
+                        <div class="form-group">
+                            <label>New Password</label>
+                            <input type="password" placeholder="Create a new password">
+                        </div>
+                        <div class="form-group">
+                            <label>Confirm New Password</label>
+                            <input type="password" placeholder="Re-type your new password">
+                        </div>
+                    </div>
+                    <div style="margin-top: 24px;">
+                        <button class="btn btn-outline" style="font-size: 13px;"><i class="fas fa-envelope"></i> Send
+                            Password Reset Email</button>
+                    </div>
+                </div>
+
+                <!-- Two-Factor Authentication Section -->
+                <div class="form-section" style="margin-top: 48px;">
+                    <h3 class="section-title-small">Two-Factor Authentication (2FA)</h3>
+
+                    <div
+                        style="display: flex; align-items: center; justify-content: space-between; padding: 24px; border: 1px solid #e5e7eb; border-radius: 12px; background: #fafafa;">
+                        <div style="display: flex; gap: 16px; align-items: flex-start;">
+                            <div
+                                style="width: 40px; height: 40px; border-radius: 50%; background: #e0e7ff; color: #4f46e5; display: flex; align-items: center; justify-content: center; font-size: 18px;">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <div>
+                                <div style="font-weight: 800; font-size: 15px; color: #1a1a2e; margin-bottom: 4px;">
+                                    Authenticator App</div>
+                                <div style="font-size: 13.5px; color: #6b7280; max-width: 400px; line-height: 1.5;">Use
+                                    an app like Google Authenticator or Authy to generate verification codes for more
+                                    protection.</div>
+                            </div>
+                        </div>
+                        <button class="btn btn-primary" style="padding: 10px 20px; font-size: 13px;">Enable 2FA</button>
+                    </div>
+                </div>
+
+            </div> <!-- Akhir dari settings-content -->
+        </div> <!-- Akhir dari settings-container -->
+    </main>
+
+</body>
+
+</html>
