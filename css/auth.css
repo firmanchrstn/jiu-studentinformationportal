@@ -315,3 +315,110 @@ html {
     object-fit: contain;
     display: block;
 }
+
+/* ── LEGAL & INFO PAGES (HELP, PRIVACY, ACCESSIBILITY) ── */
+.legal-layout {
+    background-color: #f8fafc;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto !important;
+    /* Wajib bisa di-scroll */
+}
+
+/* Navbar Khusus Halaman Legal */
+.legal-header {
+    background: white;
+    padding: 20px 60px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.legal-back-btn {
+    font-size: 14px;
+    font-weight: 800;
+    color: #4b5563;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    background: #f1f5f9;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.legal-back-btn:hover {
+    background: #e2e8f0;
+    color: #111827;
+}
+
+/* Kertas Dokumen di Tengah */
+.legal-content {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto 60px;
+    background: white;
+    padding: 50px 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+    border: 1px solid #f3f4f6;
+    box-sizing: border-box;
+}
+
+.legal-content h1 {
+    font-size: 32px;
+    font-weight: 800;
+    color: #111827;
+    margin-top: 0;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #f3f4f6;
+    letter-spacing: -1px;
+}
+
+.legal-content h2 {
+    font-size: 20px;
+    font-weight: 800;
+    color: #2b3066;
+    margin: 32px 0 16px;
+}
+
+.legal-content p,
+.legal-content li {
+    font-size: 15px;
+    color: #4b5563;
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.legal-content ul {
+    padding-left: 20px;
+}
+
+/* ── RESPONSIVE LEGAL PAGES ── */
+@media (max-width: 768px) {
+    .legal-header {
+        padding: 16px 20px;
+    }
+
+    .legal-content {
+        margin: 20px auto;
+        padding: 30px 20px;
+        border-radius: 12px;
+        width: calc(100% - 40px);
+    }
+
+    .legal-content h1 {
+        font-size: 24px;
+    }
+
+    .auth-logo-text {
+        display: none;
+    }
+}

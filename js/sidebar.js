@@ -3,8 +3,8 @@
    JIU Student Portal
    ============================================================ */
 
-const sidebar   = document.getElementById('sidebar');
-const overlay   = document.getElementById('overlay');
+const sidebar = document.getElementById('sidebar');
+const overlay = document.getElementById('overlay');
 const hamburger = document.getElementById('hamburger');
 
 /* ── Open / Close Sidebar (Mobile) ── */
@@ -42,7 +42,7 @@ document.querySelectorAll('.nav-item').forEach(item => {
       width:  ${size}px;
       height: ${size}px;
       left:   ${e.clientX - rect.left - size / 2}px;
-      top:    ${e.clientY - rect.top  - size / 2}px;
+      top:    ${e.clientY - rect.top - size / 2}px;
     `;
 
     this.appendChild(ripple);
@@ -55,4 +55,24 @@ document.querySelectorAll('.nav-item').forEach(item => {
     /* Auto-close on mobile */
     if (window.innerWidth < 680) closeSidebar();
   });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+  const sidebar = document.querySelector('.sidebar');
+
+  if (mobileMenuBtn && sidebar) {
+    mobileMenuBtn.addEventListener('click', () => {
+      sidebar.classList.toggle('active');
+    });
+
+    // Opsional: Tutup sidebar jika user mengklik area Main content
+    document.querySelector('.main').addEventListener('click', (e) => {
+      // Pastikan layarnya sedang ukuran HP dan sidebar sedang terbuka
+      if (window.innerWidth <= 768 && sidebar.classList.contains('active')) {
+        sidebar.classList.remove('active');
+      }
+    });
+  }
 });

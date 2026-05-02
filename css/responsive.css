@@ -1,83 +1,113 @@
-/* ── Mobile Hamburger Button ── */
-.hamburger {
+/* =========================================================
+   MASTER RESPONSIVE CSS (HP & TABLET)
+   ========================================================= */
+
+/* ── TOMBOL MENU MOBILE (Sembunyi di Desktop) ── */
+.mobile-menu-btn {
   display: none;
-  position: fixed;
-  top: 16px;
-  left: 16px;
-  z-index: 200;
-  background: var(--accent);
+  background: #2b3066;
+  color: white;
   border: none;
   border-radius: 8px;
   width: 40px;
   height: 40px;
-  align-items: center;
-  justify-content: center;
+  font-size: 18px;
   cursor: pointer;
-  color: white;
-  font-size: 16px;
-  box-shadow: var(--shadow-md);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* ── Dark Overlay (mobile sidebar) ── */
-.overlay {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.35);
-  z-index: 90;
-}
+/* =========================================
+   TABLET (Layar di bawah 1024px)
+   ========================================= */
+@media screen and (max-width: 1024px) {
 
-/* ── Tablet (<= 900px) ── */
-@media (max-width: 900px) {
-  .content-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .right-col {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .quick-links-card,
-  .upcoming-card {
-    flex: 1 1 280px;
+  .su-grid-3,
+  .sa-clubs-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
   }
 }
 
-/* ── Mobile (<= 680px) ── */
-@media (max-width: 680px) {
-  /* Sidebar hides off-screen by default */
+/* =========================================
+   SMARTPHONE / HP (Layar di bawah 768px)
+   ========================================= */
+@media screen and (max-width: 768px) {
+
   .sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 9999;
     transform: translateX(-100%);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 5px 0 25px rgba(0, 0, 0, 0.1);
   }
 
-  .sidebar.open {
+  .sidebar.active {
     transform: translateX(0);
   }
 
-  /* Main shifts to full width */
   .main {
-    margin-left: 0;
-    padding: 68px 16px 20px;
+    margin-left: 0 !important;
+    width: 100%;
+    padding: 16px;
   }
 
-  /* Show hamburger */
-  .hamburger {
+  .mobile-menu-btn {
     display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  /* Show overlay when active */
-  .overlay.show {
-    display: block;
-  }
-
-  /* Smaller hero title */
-  .hero-content h1 {
-    font-size: 22px;
-  }
-
-  /* Wrap stats */
-  .stats-row {
+  .breadcrumb-bar {
     flex-wrap: wrap;
+    gap: 8px;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .hero h1 {
+    font-size: 24px;
+  }
+
+  .su-grid-2,
+  .su-grid-3,
+  .ea-grid-2,
+  .ss-grid-2,
+  .sa-leadership-grid,
+  .sa-clubs-grid,
+  .dashboard-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .ea-table,
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+
+  .ss-tabs,
+  .ea-tabs {
+    padding-bottom: 10px;
+  }
+
+  .tab-btn {
+    font-size: 14px;
+  }
+
+  .modal-card {
+    width: 90%;
+    padding: 24px 20px;
+  }
+
+  .modal-actions {
+    flex-direction: column;
+  }
+
+  .btn-cancel,
+  .btn-danger {
+    width: 100%;
   }
 }

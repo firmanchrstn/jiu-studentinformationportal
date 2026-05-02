@@ -597,15 +597,12 @@ body {
     box-sizing: border-box;
     border-radius: 8px;
     color: #ef4444 !important;
-    /* Merah cerah */
     text-decoration: none;
     font-weight: 600;
     transition: all 0.2s ease;
     margin-bottom: 24px;
-    /* Memberi jarak dengan profil di bawahnya */
 }
 
-/* Memastikan ikon tetap di posisinya dan berwarna merah */
 .logout-trigger i {
     font-size: 16px;
     width: 20px;
@@ -614,18 +611,15 @@ body {
     transition: all 0.2s ease;
 }
 
-/* Efek Hover: Background Merah Transparan & Teks Merah Gelap */
 .logout-trigger:hover {
     background-color: rgba(239, 68, 68, 0.15) !important;
     color: #dc2626 !important;
-    /* Merah sedikit lebih gelap saat di-hover */
 }
 
 .logout-trigger:hover i {
     color: #dc2626 !important;
 }
 
-/* Modal Overlay (Background Gelap) */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -648,7 +642,6 @@ body {
     visibility: visible;
 }
 
-/* Modal Card */
 .modal-card {
     background: white;
     border-radius: 16px;
@@ -760,12 +753,9 @@ body {
     cursor: not-allowed;
 }
 
-/* ── LOGOUT TRIGGER IN SIDEBAR ── */
 .logout-trigger {
     color: #ef4444 !important;
-    /* Warna merah */
     margin-top: auto;
-    /* Mendorong tombol ke bawah jika ada sisa ruang */
 }
 
 .logout-trigger i {
@@ -776,7 +766,6 @@ body {
     background: rgba(239, 68, 68, 0.1) !important;
 }
 
-/* ── PREMIUM MODAL STYLES ── */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -784,9 +773,7 @@ body {
     right: 0;
     bottom: 0;
     background: rgba(15, 23, 42, 0.4);
-    /* Warna biru gelap transparan */
     backdrop-filter: blur(8px);
-    /* Efek blur premium ala Apple/Vercel */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -817,7 +804,6 @@ body {
     transform: scale(1) translateY(0);
 }
 
-/* Ikon Bulat di Atas */
 .modal-icon-wrapper {
     display: flex;
     justify-content: center;
