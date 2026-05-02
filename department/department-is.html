@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Information Systems | JIU Student Portal</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/department.css"> <!-- Scroll Lock -->
+    <link rel="stylesheet" href="../css/department-detail.css"> <!-- Styling spesifik detail -->
+</head>
+
+<body>
+
+    <!-- ── MAIN SIDEBAR ── -->
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <img src="../assets/images/jiu-logo-rounded.png" alt="JIU Logo" class="brand-logo">
+            <span class="brand-name">Student Portal</span>
+        </div>
+        <div class="sidebar-nav-wrapper">
+            <nav class="sidebar-nav">
+                <a href="../dashboard.html" class="nav-item"><i class="fas fa-house"></i> Dashboard</a>
+
+                <div class="nav-section-label">Academics</div>
+                <a href="../calendar/calendar.html" class="nav-item"><i class="fas fa-calendar-days"></i> Calendar</a>
+                <a href="../academics/academics.html" class="nav-item"><i class="fas fa-graduation-cap"></i>
+                    Academics</a>
+                <a href="department.html" class="nav-item active"><i class="fas fa-building-columns"></i> Department</a>
+
+                <div class="nav-section-label">Finance</div>
+                <a href="../cost_of_attandance/cost_of_attandance.html" class="nav-item"><i class="fas fa-coins"></i>
+                    Cost of Attendance</a>
+
+                <div class="nav-section-label">Campus Life</div>
+                <a href="../student_affairs/student_affairs.html" class="nav-item"><i class="fas fa-users"></i> Student
+                    Affairs</a>
+                <a href="../external_activities/external_activities.html" class="nav-item"><i class="fas fa-globe"></i>
+                    External Activities</a>
+                <a href="../student_services/student_services.html" class="nav-item"><i class="fas fa-headset"></i>
+                    Student Services</a>
+            </nav>
+        </div>
+        <div class="sidebar-bottom">
+            <a href="../settings/general.html" class="sidebar-settings">
+                <i class="fas fa-gear"></i> Settings
+            </a>
+            <div class="sidebar-user">
+                <div class="user-avatar">FP</div>
+                <div class="user-info">
+                    <div class="user-name">Firman Purba</div>
+                    <div class="user-id">ID: 2023001</div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ── MAIN CONTENT ── -->
+    <main class="main department-page">
+        <!-- Breadcrumb Bar -->
+        <div class="breadcrumb-bar"
+            style="background: #e5e5e5; padding: 16px 24px; border-radius: 12px; display: flex; gap: 12px; font-weight: 700; color: #6b7280; margin-bottom: 24px; margin-top: 16px;">
+            <i class="fas fa-building-columns" style="font-size: 16px;"></i>
+            <a href="department.html" style="color: #6b7280; text-decoration: none;">Department</a>
+            <i class="fas fa-chevron-right" style="font-size: 10px; margin-top: 4px;"></i>
+            <span style="color: #5c5fa3;">Information Systems</span>
+        </div>
+
+        <div class="full-width-container">
+
+            <!-- Hero Banner -->
+            <div class="dept-hero-banner">
+                <h1>Information Systems</h1>
+                <p>Bridging the gap between cutting-edge technology and strategic business solutions. Empowering the
+                    next generation of digital leaders.</p>
+                <button class="btn btn-outline"
+                    style="background: white; border: none; color: #4a148c; padding: 10px 20px; border-radius: 8px; font-weight: 700;">Explore
+                    Programs <i class="fas fa-arrow-right"></i></button>
+            </div>
+
+            <!-- Leadership -->
+            <div class="section-title-icon"><i class="fas fa-users-cog"></i> Department Leadership</div>
+            <div class="leadership-container">
+                <div class="leader-card">
+                    <div class="leader-profile">
+                        <!-- URL Gambar Dummy, bisa diganti dengan foto dosen JIU asli -->
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=200&q=80"
+                            alt="Head of Dept" class="leader-img">
+                        <div>
+                            <h3 style="font-weight: 800; font-size: 18px;">Dr. Robert Vance</h3>
+                            <div style="font-size: 12px; color: #5c5fa3; font-weight: 800; margin-bottom: 12px;">Head of
+                                Department</div>
+                            <p style="font-size: 13px; color: #4b5563; line-height: 1.5; margin-bottom: 16px;">With over
+                                20 years of experience in enterprise systems and digital transformation, Dr. Vance leads
+                                the visionary push for integrating Artificial Intelligence into core business processes.
+                            </p>
+                            <button class="btn"
+                                style="background: #f3f0ff; color: #4a148c; padding: 8px 16px; border-radius: 6px; font-size: 12px; font-weight: 800; border: none;"><i
+                                    class="far fa-envelope"></i> Contact Head</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-row">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <div class="label">Location</div>
+                            <div class="value">Building A, 4th Floor</div>
+                        </div>
+                    </div>
+                    <div class="contact-row">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <div class="label">Phone</div>
+                            <div class="value">(021) 123-4567</div>
+                        </div>
+                    </div>
+                    <div class="contact-row">
+                        <i class="far fa-clock"></i>
+                        <div>
+                            <div class="label">Office Hours</div>
+                            <div class="value">Mon - Fri, 9:00 AM - 4:00 PM</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Vision Mission -->
+            <div class="section-title-icon"><i class="fas fa-eye"></i> Vision & Mission</div>
+            <div class="vision-card">
+                <div>
+                    <h4>Our Vision</h4>
+                    <p style="font-size: 16px; line-height: 1.6;">To be a global leader in Information Systems
+                        education, empowering digital leaders who bridge the gap between human ingenuity and
+                        technological advancement.</p>
+                </div>
+                <div>
+                    <h4>Our Mission</h4>
+                    <ul style="font-size: 14px; line-height: 1.6; padding-left: 20px;">
+                        <li>Provide industry-aligned technical and business curriculum.</li>
+                        <li>Foster an environment of innovation and ethical leadership.</li>
+                        <li>Equip students with robust front-end, back-end, and database skills.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Degree Requirements -->
+            <div class="section-title-icon"><i class="fas fa-clipboard-check"></i> Degree Requirements</div>
+            <div class="req-card">
+                <div class="req-top">
+                    <div class="req-number">144</div>
+                    <div>
+                        <div style="font-size: 11px; font-weight: 800; color: #6b7280; text-transform: uppercase;">Total
+                            Credits Required</div>
+                    </div>
+                    <div class="req-badges">
+                        <span
+                            style="background: #f3e8ff; color: #7e22ce; padding: 4px 12px; border-radius: 12px; font-size: 11px; font-weight: 800;">GPA
+                            &ge; 2.0 Min</span>
+                        <span
+                            style="background: #e0f2fe; color: #0369a1; padding: 4px 12px; border-radius: 12px; font-size: 11px; font-weight: 800;">Internship
+                            Required</span>
+                    </div>
+                </div>
+                <div class="req-grid">
+                    <div>
+                        <div class="req-item-title">Core IS Courses</div>
+                        <div class="req-item-desc">Database Management, Systems Analysis, Web Development</div>
+                    </div>
+                    <div>
+                        <div class="req-item-title">Business Foundation</div>
+                        <div class="req-item-desc">Financial Accounting, Enterprise Management</div>
+                    </div>
+                    <div>
+                        <div class="req-item-title">General Education</div>
+                        <div class="req-item-desc">JIU Core Humanities and Sciences</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Academic Programs -->
+            <div class="section-title-icon"><i class="fas fa-book"></i> Academic Programs</div>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="program-icon"><i class="fas fa-chart-pie"></i></div>
+                    <h4 style="font-size: 15px; font-weight: 800; margin-bottom: 8px;">Data Analytics</h4>
+                    <p style="font-size: 13px; color: #6b7280; margin-bottom: 16px; line-height: 1.5;">Master the art of
+                        extracting insights from complex datasets to drive organizational decision-making.</p>
+                    <a href="#" style="font-size: 12px; font-weight: 800; color: #4a148c; text-decoration: none;">Learn
+                        More <i class="fas fa-chevron-right" style="font-size: 10px;"></i></a>
+                </div>
+                <div class="program-card">
+                    <div class="program-icon"><i class="fas fa-project-diagram"></i></div>
+                    <h4 style="font-size: 15px; font-weight: 800; margin-bottom: 8px;">Business Intelligence</h4>
+                    <p style="font-size: 13px; color: #6b7280; margin-bottom: 16px; line-height: 1.5;">Strategic
+                        application of technology and data analysis to provide actionable business intelligence.</p>
+                    <a href="#" style="font-size: 12px; font-weight: 800; color: #4a148c; text-decoration: none;">Learn
+                        More <i class="fas fa-chevron-right" style="font-size: 10px;"></i></a>
+                </div>
+            </div>
+
+            <!-- Curriculum -->
+            <div class="section-title-icon"><i class="fas fa-sitemap"></i> Curriculum Overview</div>
+            <table class="curriculum-table">
+                <thead>
+                    <tr>
+                        <th>Year</th>
+                        <th>Core Subjects</th>
+                        <th>Focus Area</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="color: #5c5fa3;">Year 1 & 2</td>
+                        <td>Java Structures, Database Systems, UI/UX Principles</td>
+                        <td style="color: #9ca3af; text-transform: capitalize;">Foundations</td>
+                    </tr>
+                    <tr>
+                        <td style="color: #5c5fa3;">Year 3</td>
+                        <td>Systems Analysis, Network Security, Front-End Frameworks</td>
+                        <td style="color: #9ca3af; text-transform: capitalize;">Implementation</td>
+                    </tr>
+                    <tr>
+                        <td style="color: #5c5fa3;">Year 4</td>
+                        <td>IT Strategy, Capstone Project, Software Engineering</td>
+                        <td style="color: #9ca3af; text-transform: capitalize;">Leadership</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </main>
+
+</body>
+
+</html>

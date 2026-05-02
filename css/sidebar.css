@@ -74,12 +74,10 @@
   padding: 20px 0;
   overflow-y: auto;
   overflow-x: visible;
-
-  /* Hide scrollbar — all browsers */
   scrollbar-width: none;         /* Firefox */
   -ms-overflow-style: none;      /* IE/Edge */
 }
-.sidebar-nav::-webkit-scrollbar { display: none; } /* Chrome/Safari */
+.sidebar-nav::-webkit-scrollbar { display: none; }
 
 /* ── Section Labels ── */
 .nav-section-label {
@@ -106,7 +104,7 @@
   margin-bottom: 2px;
   position: relative;
   border-radius: 0;
-  overflow: hidden; /* needed for ripple */
+  overflow: hidden;
 }
 
 .nav-item:hover {

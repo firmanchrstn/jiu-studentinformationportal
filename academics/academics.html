@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Academic Policies | JIU Student Portal</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/academics.css">
+</head>
+
+<body>
+
+    <!-- ── MAIN SIDEBAR ── -->
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <img src="../assets/images/jiu-logo-rounded.png" alt="JIU Logo" class="brand-logo">
+            <span class="brand-name">Student Portal</span>
+        </div>
+
+        <div class="sidebar-nav-wrapper">
+            <nav class="sidebar-nav">
+                <a href="../dashboard.html" class="nav-item"><i class="fas fa-house"></i> Dashboard</a>
+
+                <div class="nav-section-label">Academics</div>
+                <a href="../calendar/calendar.html" class="nav-item"><i class="fas fa-calendar-days"></i> Calendar</a>
+                <!-- Class active dipindah ke Academics -->
+                <a href="academics.html" class="nav-item active"><i class="fas fa-graduation-cap"></i> Academics</a>
+                <a href="../department/department.html" class="nav-item"><i class="fas fa-building-columns"></i>
+                    Department</a>
+
+                <div class="nav-section-label">Finance</div>
+                <a href="../cost_of_attandance/cost_of_attandance.html" class="nav-item"><i class="fas fa-coins"></i>
+                    Cost of Attendance</a>
+
+                <div class="nav-section-label">Campus Life</div>
+                <a href="../student_affairs/student_affairs.html" class="nav-item"><i class="fas fa-users"></i> Student
+                    Affairs</a>
+                <a href="../external_activities/external_activities.html" class="nav-item"><i class="fas fa-globe"></i>
+                    External Activities</a>
+                <a href="../student_services/student_services.html" class="nav-item"><i class="fas fa-headset"></i>
+                    Student Services</a>
+            </nav>
+        </div>
+
+        <div class="sidebar-bottom">
+            <a href="../settings/general.html" class="sidebar-settings">
+                <i class="fas fa-gear"></i> Settings
+            </a>
+            <div class="sidebar-user">
+                <div class="user-avatar">FP</div>
+                <div class="user-info">
+                    <div class="user-name">Firman Purba</div>
+                    <div class="user-id">ID: 2023001</div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ── MAIN CONTENT ── -->
+    <main class="main academics-page">
+        <div class="hero-wrapper">
+            <div class="hero">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1>Welcome back, Firman!</h1>
+                    <p>-Access Your academic life, simplified.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Breadcrumb Bar -->
+        <div class="breadcrumb-bar"
+            style="background: #e5e5e5; padding: 16px 24px; border-radius: 12px; display: flex; gap: 12px; font-weight: 700; color: #6b7280; margin-bottom: 30px;">
+            <i class="fas fa-graduation-cap" style="font-size: 16px;"></i>
+            <span>Academic</span>
+        </div>
+
+        <div class="full-width-container">
+
+            <!-- Header & Search Area -->
+            <div class="academic-header">
+                <div class="academic-header-top">
+                    <div>
+                        <h1>Academic Policies & Procedures</h1>
+                        <p>Essential guidelines governing academic life, from registration protocols to graduation
+                            requirements and student conduct.</p>
+                    </div>
+                    <a href="#" class="btn-download">Download Document <i class="fas fa-download"></i></a>
+                </div>
+
+                <div class="policy-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text"
+                        placeholder="Search for specific policies (e.g., 'Late Enrollment', 'GPA Calculation')">
+                </div>
+            </div>
+
+            <!-- Tabs Navigation -->
+            <div class="policy-tabs">
+                <button class="tab-btn active" data-target="tab-program">Program Structure and Credit Terms</button>
+                <button class="tab-btn" data-target="tab-leave">Academic Leave & Inactive Status</button>
+                <button class="tab-btn" data-target="tab-judicium">Judicium & Graduation Process</button>
+                <button class="tab-btn" data-target="tab-standing">Academic Standing & Status</button>
+            </div>
+
+            <!-- ==========================================
+                 TAB 1: PROGRAM STRUCTURE (Yang sudah ada)
+            =========================================== -->
+            <div id="tab-program" class="tab-content active">
+                <div class="policy-card">
+                    <div class="accordion-header">
+                        <div class="accordion-title-wrapper">
+                            <div class="accordion-icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <div class="accordion-title">Length of Study</div>
+                                <div class="accordion-subtitle">Maximum calendar time for degree completion.</div>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="policy-card">
+                    <div class="accordion-header">
+                        <div class="accordion-title-wrapper">
+                            <div class="accordion-icon"><i class="fas fa-book-open"></i></div>
+                            <div>
+                                <div class="accordion-title">Academic Credits</div>
+                                <div class="accordion-subtitle">Credit hours conversion and load requirements.</div>
+                            </div>
+                        </div>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                </div>
+
+                <div class="policy-grid-2">
+                    <div class="policy-card" style="margin-bottom: 0;">
+                        <h3 style="font-weight: 800; font-size: 16px; margin-bottom: 16px;">Assessment Components</h3>
+                        <ul style="padding-left: 20px; color: #4b5563; font-size: 14px; line-height: 2;">
+                            <li>Continuous Assessment & Assignments - <strong>20-40%</strong></li>
+                            <li>Mid-Term Examination (UTS) - <strong>30%</strong></li>
+                            <li>Final Examination (UAS) - <strong>30-50%</strong></li>
+                        </ul>
+                    </div>
+                    <div class="policy-card" style="margin-bottom: 0;">
+                        <h3 style="font-weight: 800; font-size: 16px; margin-bottom: 16px;">Examination Rules</h3>
+                        <p style="color: #4b5563; font-size: 13.5px; line-height: 1.6; margin-bottom: 16px;">
+                            Students must present their JIU Student ID. Students with unresolved administrative or
+                            financial issues will be restricted.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 TAB 2: ACADEMIC LEAVE & INACTIVE STATUS
+            =========================================== -->
+            <div id="tab-leave" class="tab-content">
+                <div class="leave-grid">
+                    <!-- Standard Leave Card -->
+                    <div class="policy-card"
+                        style="margin-bottom: 0; display: flex; flex-direction: column; justify-content: space-between;">
+                        <div>
+                            <div class="accordion-icon" style="margin-bottom: 16px;"><i
+                                    class="fas fa-calendar-minus"></i></div>
+                            <h3 style="font-weight: 800; font-size: 18px; margin-bottom: 12px;">Standard Academic Leave
+                            </h3>
+                            <p style="font-size: 14px; color: #4b5563; line-height: 1.6; margin-bottom: 24px;">
+                                Students are entitled to a maximum of <strong>two (2) semesters</strong> of authorized
+                                academic leave during their entire degree program.
+                            </p>
+                            <div style="display: flex; gap: 16px;">
+                                <div style="background: #f9fafb; padding: 16px; border-radius: 12px; flex: 1;">
+                                    <i class="fas fa-stopwatch" style="color: #9ca3af; margin-bottom: 8px;"></i>
+                                    <div style="font-size: 12px; font-weight: 800;">Time Calculation</div>
+                                    <div style="font-size: 12px; color: #6b7280; margin-top: 4px;">Leave periods are not
+                                        counted towards limits.</div>
+                                </div>
+                                <div style="background: #f9fafb; padding: 16px; border-radius: 12px; flex: 1;">
+                                    <i class="fas fa-notes-medical" style="color: #9ca3af; margin-bottom: 8px;"></i>
+                                    <div style="font-size: 12px; font-weight: 800;">Medical Extension</div>
+                                    <div style="font-size: 12px; color: #6b7280; margin-top: 4px;">Possible beyond 2
+                                        semesters with proof.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style="margin-top: 24px; text-align: right;">
+                            <a href="#"
+                                style="font-size: 12px; font-weight: 800; color: #5c5fa3; text-decoration: none;">APPLY
+                                FOR LEAVE <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
+
+                    <!-- Inactive Designation (Purple Card) -->
+                    <div class="card-purple-dark">
+                        <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 20px;">
+                            <i class="fas fa-user-slash" style="font-size: 24px; color: #d8b4fe;"></i>
+                            <h3 style="font-size: 20px; font-weight: 800;">Inactive Designation</h3>
+                        </div>
+                        <p style="font-size: 14px; color: #e9d5ff; line-height: 1.6; margin-bottom: 24px;">
+                            A student's status is automatically transitioned to "Inactive" under the following
+                            conditions:
+                        </p>
+                        <div class="num-list">
+                            <div class="num-circle">01</div>
+                            <div style="font-size: 13.5px; line-height: 1.5; color: #f3e8ff;">Failure to report back to
+                                the university upon the expiration of an approved academic leave.</div>
+                        </div>
+                        <div class="num-list">
+                            <div class="num-circle">02</div>
+                            <div style="font-size: 13.5px; line-height: 1.5; color: #f3e8ff;">Failure to complete the
+                                course enrollment process within the officially designated university timelines.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Re-instatement Protocol -->
+                <div class="reinstatement-card">
+                    <div
+                        style="width: 250px; background: #e5e7eb; display: flex; align-items: center; justify-content: center;">
+                        <i class="fas fa-folder-open" style="font-size: 40px; color: #9ca3af;"></i>
+                    </div>
+                    <div style="padding: 32px; flex: 1; background: white;">
+                        <h3 style="font-weight: 800; font-size: 18px; margin-bottom: 8px;">Re-instatement Protocols</h3>
+                        <p style="font-size: 14px; color: #6b7280; margin-bottom: 24px;">Returning to active study
+                            status requires a formal administrative review. Adhere to strict deadlines.</p>
+                        <div style="display: flex; gap: 40px;">
+                            <div>
+                                <div style="font-size: 32px; font-weight: 800; color: #5c5fa3; line-height: 1;">14 Days
+                                </div>
+                                <div
+                                    style="font-size: 11px; font-weight: 800; color: #9ca3af; text-transform: uppercase; margin-top: 4px;">
+                                    Prior to Enrollment</div>
+                            </div>
+                            <div style="border-left: 1px solid #e5e7eb; padding-left: 24px;">
+                                <div style="font-size: 13px; font-weight: 800; margin-bottom: 8px;"><i
+                                        class="fas fa-file-signature"></i> Required Action</div>
+                                <ul style="font-size: 13px; color: #4b5563; padding-left: 16px; line-height: 1.8;">
+                                    <li>Formal Re-instatement Request Form</li>
+                                    <li>Academic Advising Confirmation</li>
+                                    <li>Clearance from Financial Office</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 TAB 3: JUDICIUM & GRADUATION PROCESS
+            =========================================== -->
+            <div id="tab-judicium" class="tab-content">
+                <div class="judicium-grid">
+                    <div class="policy-card" style="margin-bottom: 0;">
+                        <h3 style="font-weight: 800; font-size: 18px; margin-bottom: 24px;">Mandatory Requirements</h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+                            <div style="display: flex; gap: 12px;">
+                                <div class="accordion-icon" style="width: 32px; height: 32px; font-size: 12px;"><i
+                                        class="fas fa-chart-line"></i></div>
+                                <div>
+                                    <div style="font-size: 13px; font-weight: 800; margin-bottom: 4px;">GPA Threshold
+                                    </div>
+                                    <div style="font-size: 12px; color: #6b7280; line-height: 1.5;">Minimum cumulative
+                                        Grade Point Average of <strong>2.00</strong> is required.</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 12px;">
+                                <div class="accordion-icon" style="width: 32px; height: 32px; font-size: 12px;"><i
+                                        class="fas fa-check-circle"></i></div>
+                                <div>
+                                    <div style="font-size: 13px; font-weight: 800; margin-bottom: 4px;">Subject
+                                        Completion</div>
+                                    <div style="font-size: 12px; color: #6b7280; line-height: 1.5;">Zero tolerance for
+                                        failed (F) subjects.</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 12px;">
+                                <div class="accordion-icon" style="width: 32px; height: 32px; font-size: 12px;"><i
+                                        class="fas fa-calendar-times"></i></div>
+                                <div>
+                                    <div style="font-size: 13px; font-weight: 800; margin-bottom: 4px;">Leave Allowance
+                                    </div>
+                                    <div style="font-size: 12px; color: #6b7280; line-height: 1.5;">Maximum of 2
+                                        semesters leave throughout study.</div>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 12px;">
+                                <div class="accordion-icon" style="width: 32px; height: 32px; font-size: 12px;"><i
+                                        class="fas fa-file-invoice-dollar"></i></div>
+                                <div>
+                                    <div style="font-size: 13px; font-weight: 800; margin-bottom: 4px;">Clean
+                                        Obligations</div>
+                                    <div style="font-size: 12px; color: #6b7280; line-height: 1.5;">No pending financial
+                                        dues or unreturned assets.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        style="background: linear-gradient(135deg, #5c5fa3, #4a148c); border-radius: 16px; color: white; padding: 32px; display: flex; flex-direction: column; justify-content: flex-end;">
+                        <span
+                            style="font-size: 11px; font-weight: 800; background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 10px; width: fit-content; margin-bottom: 8px;">Official
+                            Guideline</span>
+                        <h3 style="font-size: 20px; font-weight: 800;">The Path to Commencement</h3>
+                    </div>
+                </div>
+
+                <div class="policy-card" style="text-align: center; background: #f9fafb;">
+                    <h3 style="font-weight: 800; font-size: 18px; margin-bottom: 8px;">Approval Workflow</h3>
+                    <p style="font-size: 14px; color: #6b7280; margin-bottom: 24px;">A multi-unit verification process
+                        ensuring academic integrity.</p>
+
+                    <div class="workflow-container">
+                        <div class="workflow-line"></div>
+                        <div class="workflow-step">
+                            <div class="workflow-icon"><i class="fas fa-user-graduate"></i></div>
+                            <div style="font-weight: 800; font-size: 14px;">Study Program</div>
+                            <div style="font-size: 11px; color: #5c5fa3; font-weight: 800; margin: 4px 0;">PHASE 01
+                            </div>
+                            <div style="font-size: 12px; color: #6b7280; line-height: 1.5;">Initial validation of credit
+                                load and eligibility.</div>
+                        </div>
+                        <div class="workflow-step">
+                            <div class="workflow-icon"><i class="fas fa-university"></i></div>
+                            <div style="font-weight: 800; font-size: 14px;">Academic Unit</div>
+                            <div style="font-size: 11px; color: #5c5fa3; font-weight: 800; margin: 4px 0;">PHASE 02
+                            </div>
+                            <div style="font-size: 12px; color: #6b7280; line-height: 1.5;">Verification of transcripts
+                                and graduation requirements.</div>
+                        </div>
+                        <div class="workflow-step">
+                            <div class="workflow-icon"><i class="fas fa-coins"></i></div>
+                            <div style="font-weight: 800; font-size: 14px;">Finance Unit</div>
+                            <div style="font-size: 11px; color: #5c5fa3; font-weight: 800; margin: 4px 0;">PHASE 03
+                            </div>
+                            <div style="font-size: 12px; color: #6b7280; line-height: 1.5;">Final clearance of all
+                                financial obligations.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 TAB 4: ACADEMIC STANDING & STATUS
+            =========================================== -->
+            <div id="tab-standing" class="tab-content">
+                <div class="policy-grid-2">
+                    <div class="policy-card" style="margin-bottom: 0;">
+                        <h3 style="font-weight: 800; font-size: 18px; color: #4a148c; margin-bottom: 12px;">Criterion I:
+                            Initial Progress</h3>
+                        <p style="font-size: 14px; color: #4b5563; line-height: 1.6; margin-bottom: 24px;">Students who
+                            fail to demonstrate adequate academic momentum during their first four semesters are subject
+                            to mandatory withdrawal.</p>
+                        <div style="display: flex; gap: 24px;">
+                            <div>
+                                <div style="font-size: 24px; font-weight: 800; color: #1f2937;">&lt;30</div>
+                                <div
+                                    style="font-size: 10px; font-weight: 800; color: #9ca3af; text-transform: uppercase;">
+                                    Credits Earned</div>
+                            </div>
+                            <div>
+                                <div style="font-size: 24px; font-weight: 800; color: #ef4444;">&lt;2.00</div>
+                                <div
+                                    style="font-size: 10px; font-weight: 800; color: #9ca3af; text-transform: uppercase;">
+                                    Cumulative GPA</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="policy-card" style="margin-bottom: 0; background: #f3f0ff; border-color: #e0d4fc;">
+                        <h3 style="font-weight: 800; font-size: 18px; margin-bottom: 12px;">Criterion II: Consistent
+                            Performance</h3>
+                        <p style="font-size: 14px; color: #4b5563; line-height: 1.6; margin-bottom: 24px;">Sustained low
+                            performance results in immediate review for academic dismissal.</p>
+                        <div style="background: white; padding: 16px; border-radius: 12px;">
+                            <div
+                                style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
+                                <span
+                                    style="font-size: 11px; font-weight: 800; color: #9ca3af; text-transform: uppercase;">Target
+                                    GPA</span>
+                                <span class="status-badge status-critical">Critical</span>
+                            </div>
+                            <div style="font-size: 15px; font-weight: 800;">Cumulative GPA &lt; 2.00 at the end of 3
+                                semesters.</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Status Table -->
+                <table class="standing-table">
+                    <thead>
+                        <tr>
+                            <th>Monitoring Point</th>
+                            <th>Min. Credits</th>
+                            <th>Min. GPA</th>
+                            <th>Standing Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>End of 2nd Semester</td>
+                            <td>15 Credits</td>
+                            <td>2.00</td>
+                            <td><span class="status-badge status-good">Good Standing</span></td>
+                        </tr>
+                        <tr>
+                            <td>End of 3rd Semester</td>
+                            <td>22 Credits</td>
+                            <td style="color: #ef4444; font-weight: 800;">2.00</td>
+                            <td><span class="status-badge status-warning">Warning</span></td>
+                        </tr>
+                        <tr>
+                            <td>End of 4th Semester</td>
+                            <td style="color: #ef4444; font-weight: 800;">30 Credits</td>
+                            <td style="color: #ef4444; font-weight: 800;">2.00</td>
+                            <td><span class="status-badge status-critical">Dismissal Threshold</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Appeal Process Card -->
+                <div class="appeal-grid">
+                    <div>
+                        <h3 style="font-weight: 800; font-size: 20px; margin-bottom: 12px;">Appeal Process</h3>
+                        <p style="font-size: 14px; color: #4b5563; line-height: 1.6; margin-bottom: 24px;">
+                            Students facing dismissal have the right to one formal appeal. Appeals must be grounded in
+                            documented mitigating circumstances (medical, family emergency).
+                        </p>
+                        <button class="btn btn-primary"
+                            style="background: #4a148c; padding: 12px 24px; border-radius: 8px; border: none; color: white; font-weight: 700; cursor: pointer;">Begin
+                            Appeal Submission</button>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 16px;">
+                        <div
+                            style="background: white; padding: 20px; border-radius: 12px; display: flex; align-items: center; gap: 16px;">
+                            <div class="accordion-icon"><i class="fas fa-comments"></i></div>
+                            <div>
+                                <div style="font-size: 14px; font-weight: 800;">Academic Advising</div>
+                                <div style="font-size: 12px; color: #6b7280;">Schedule a mandatory strategy session.
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            style="background: white; padding: 20px; border-radius: 12px; display: flex; align-items: center; gap: 16px;">
+                            <div class="accordion-icon" style="background: #fef3c7; color: #d97706;"><i
+                                    class="fas fa-toolbox"></i></div>
+                            <div>
+                                <div style="font-size: 14px; font-weight: 800;">Success Resources</div>
+                                <div style="font-size: 12px; color: #6b7280;">Attend tutoring and time-management
+                                    workshops.</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Help Footer -->
+            <div class="help-footer-card">
+                <div class="help-text-area">
+                    <div class="help-icon"><i class="fas fa-info"></i></div>
+                    <div>
+                        <div class="help-title">Need clarification?</div>
+                        <div class="help-desc">The Academic Affairs office is here to help with policy interpretation
+                            and exceptions.</div>
+                    </div>
+                </div>
+                <div class="help-actions">
+                    <button class="btn btn-outline"
+                        style="padding: 10px 20px; border-radius: 8px; border: 1px solid #5c5fa3; color: #5c5fa3; font-weight: 700; background: white; cursor: pointer;">Contact
+                        Advisor</button>
+                    <button class="btn btn-primary"
+                        style="padding: 10px 20px; border-radius: 8px; border: none; background: #5c5fa3; color: white; font-weight: 700; cursor: pointer;">Submit
+                        Petition</button>
+                </div>
+            </div>
+
+        </div> <!-- End Full Width Container -->
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    button.classList.add('active');
+
+                    const targetId = button.getAttribute('data-target');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
+</main>
+
+</body>
+
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cost of Attendance | JIU Student Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/finance.css">
+</head>
+
+<body>
+
+    <!-- ── MAIN SIDEBAR ── -->
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <img src="../assets/images/jiu-logo-rounded.png" alt="JIU Logo" class="brand-logo">
+            <span class="brand-name">Student Portal</span>
+        </div>
+        <div class="sidebar-nav-wrapper">
+            <nav class="sidebar-nav">
+                <a href="../dashboard.html" class="nav-item"><i class="fas fa-house"></i> Dashboard</a>
+
+                <div class="nav-section-label">Academics</div>
+                <a href="../calendar/calendar.html" class="nav-item"><i class="fas fa-calendar-days"></i> Calendar</a>
+                <a href="../academics/academics.html" class="nav-item"><i class="fas fa-graduation-cap"></i>
+                    Academics</a>
+                <a href="../department/department.html" class="nav-item"><i class="fas fa-building-columns"></i>
+                    Department</a>
+
+                <div class="nav-section-label">Finance</div>
+                <!-- Active Class on Cost of Attendance -->
+                <a href="cost_of_attendance.html" class="nav-item active"><i class="fas fa-coins"></i> Cost of
+                    Attendance</a>
+
+                <div class="nav-section-label">Campus Life</div>
+                <a href="../student_affairs/student_affairs.html" class="nav-item"><i class="fas fa-users"></i> Student
+                    Affairs</a>
+                <a href="../external_activities/external_activities.html" class="nav-item"><i class="fas fa-globe"></i>
+                    External Activities</a>
+                <a href="../student_services/student_services.html" class="nav-item"><i class="fas fa-headset"></i>
+                    Student Services</a>
+            </nav>
+        </div>
+        <div class="sidebar-bottom">
+            <a href="../settings/general.html" class="sidebar-settings">
+                <i class="fas fa-gear"></i> Settings
+            </a>
+            <div class="sidebar-user">
+                <div class="user-avatar">FP</div>
+                <div class="user-info">
+                    <div class="user-name">Firman Purba</div>
+                    <div class="user-id">ID: 2023001</div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <!-- ── MAIN CONTENT ── -->
+    <!-- Class finance-page untuk scroll lock -->
+    <main class="main finance-page">
+        <!-- Sticky Hero Wrapper -->
+        <div class="hero-wrapper">
+            <div class="hero">
+                <div class="hero-overlay"></div>
+                <div class="hero-content">
+                    <h1>Welcome back, Firman!</h1>
+                    <p>-Access Your academic life, simplified.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Breadcrumb Bar -->
+        <div class="breadcrumb-bar"
+            style="background: #e5e5e5; padding: 16px 24px; border-radius: 12px; display: flex; gap: 12px; font-weight: 700; color: #6b7280; margin-bottom: 30px;">
+            <i class="fas fa-coins" style="font-size: 16px;"></i>
+            <span style="color: #6b7280;">Cost of Attendance</span>
+        </div>
+
+        <div class="full-width-container">
+
+            <!-- Tabs Navigation -->
+            <div class="finance-tabs">
+                <button class="tab-btn active" data-target="tab-domestic">Domestic Students</button>
+                <button class="tab-btn" data-target="tab-international">International Students</button>
+            </div>
+
+            <!-- ==========================================
+                 TAB 1: DOMESTIC STUDENTS
+            =========================================== -->
+            <div id="tab-domestic" class="tab-content active">
+                <h2 style="font-size: 20px; font-weight: 800; margin-bottom: 20px; color: #111827;">Domestic Student
+                    Tuition & Fees</h2>
+
+                <div class="fees-grid">
+                    <!-- Term Fees -->
+                    <div class="fee-card">
+                        <div class="fee-card-title">Term Fees</div>
+                        <div class="fee-row"><span class="label">Tuition (EL/JL/ACC)</span><span class="value">Rp.
+                                12,500,000</span></div>
+                        <div class="fee-row"><span class="label">Tuition (IT/IS/VCD)</span><span class="value">Rp.
+                                15,000,000</span></div>
+                        <div class="fee-row"><span class="label">Dorm Fee (Monthly)</span><span class="value">Rp.
+                                2,800,000</span></div>
+                        <div class="fee-row"><span class="label">Meal Fee (Monthly)</span><span class="value">Rp.
+                                2,400,000</span></div>
+                    </div>
+
+                    <!-- One-Time Fees -->
+                    <div class="fee-card highlight">
+                        <div class="fee-card-title"><i class="fas fa-check-circle"></i> One-Time Enrollment Fees</div>
+                        <div class="fee-row"><span class="label">Registration Fee</span><span class="value">Rp.
+                                300,000</span></div>
+                        <div class="fee-row"><span class="label">Development Fee</span><span class="value">Rp.
+                                10,000,000</span></div>
+                        <div class="fee-row"><span class="label">Matriculation Fee</span><span class="value">Rp.
+                                3,000,000</span></div>
+                    </div>
+                </div>
+
+                <h3 style="font-size: 16px; font-weight: 800; margin-bottom: 16px; color: #111827;">Payment Rules &
+                    Installments</h3>
+                <div class="installments-grid">
+                    <div class="installment-card">
+                        <div class="inst-title">Enrollment</div>
+                        <div class="inst-value">25%</div>
+                        <div class="inst-desc">of total bill required</div>
+                    </div>
+                    <div class="installment-card">
+                        <div class="inst-title">Midterm</div>
+                        <div class="inst-value">50%</div>
+                        <div class="inst-desc">of total bill required</div>
+                    </div>
+                    <div class="installment-card">
+                        <div class="inst-title">Final Exam</div>
+                        <div class="inst-value">100%</div>
+                        <div class="inst-desc">of total bill required</div>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <div style="font-weight: 800; font-size: 13px; color: #111827; margin-bottom: 8px;">Note</div>
+                    <ul style="font-size: 13px; color: #4b5563; line-height: 1.8; padding-left: 20px;">
+                        <li>As a requirement for Enrollment, students are required to pay 25% of the total bill.</li>
+                        <li>As a requirement for Midterm, students are required to pay 50% of the total bill.</li>
+                        <li>As a requirement for Final Exam, students are required to pay 100% of the total bill.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 TAB 2: INTERNATIONAL STUDENTS
+            =========================================== -->
+            <div id="tab-international" class="tab-content">
+                <h2 style="font-size: 20px; font-weight: 800; margin-bottom: 20px; color: #111827;">International
+                    Student Fees</h2>
+
+                <table class="finance-table">
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>In State (Approx.)</th>
+                            <th>Out of State</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="font-weight: 600;">Registration</td>
+                            <td>$18.75 / Rp 300k</td>
+                            <td class="out-of-state-value">$30 / Rp 480k</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">Development</td>
+                            <td>$625 / Rp 10M</td>
+                            <td class="out-of-state-value">$1,000 / Rp 16M</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">Matriculation</td>
+                            <td>$187.5 / Rp 3M</td>
+                            <td class="out-of-state-value">$300 / Rp 4.8M</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">Tuition</td>
+                            <td>$937.5 / Rp 15M</td>
+                            <td class="out-of-state-value">$1,500 / Rp 24M</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">Dormitory</td>
+                            <td>$262.5 / Rp 4.2M</td>
+                            <td class="out-of-state-value">$420 / Rp 6.72M</td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: 600;">Meal</td>
+                            <td>$225 / Rp 3.6M</td>
+                            <td class="out-of-state-value">$250 / Rp 4M</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="warning-box">
+                    <i class="fas fa-info-circle"></i>
+                    <div>
+                        <div class="warning-title">Additional Visa Costs</div>
+                        <div class="warning-desc">$650 application fee, $650 extension (required every 2 years).</div>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <div style="font-weight: 800; font-size: 13px; color: #111827; margin-bottom: 8px;">Note</div>
+                    <ul style="font-size: 13px; color: #4b5563; line-height: 1.8; padding-left: 20px;">
+                        <li>Exchange Rate: 1 USD = 16,000 IDR (subject to change based on current exchange rate).</li>
+                        <li>The listed tuition fees apply only to the following programs: Information Technology,
+                            Information Systems, and Visual Communication Design.</li>
+                        <li>For English Literature, Japanese Literature, and Accounting:
+                            <br> (*) Out of State tuition is USD 1,200
+                            <br> (*) In State tuition is IDR 12,000,000
+                        </li>
+                        <li>Fees in <i>italic</i> are charged only in Semester 1.</li>
+                        <li>Fees in <b>bold</b> are charged every semester.</li>
+                        <li>The highlighted column shows the amount as displayed on the official website and promotional
+                            materials. The non-highlighted column presents the converted value for reference purposes
+                            only.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 SHARED BOTTOM SECTION (FAQ & METHODS)
+            =========================================== -->
+            <div class="bottom-section">
+                <!-- FAQ Accordion -->
+                <div>
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            When is the final deadline for fall semester tuition? <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            The final deadline for all outstanding Fall 2026 balances is October 15th. Late fees of $150
+                            will be applied thereafter.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            How do I set up a monthly payment plan? <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            You can set up a monthly payment plan through the Finance portal under 'Installments'. Plans
+                            can be divided into 3 to 6 months depending on your eligibility.
+                        </div>
+                    </div>
+
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            My scholarship isn't appearing on my statement. <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            Scholarships are typically applied 2 weeks before the start of the semester. If it's still
+                            missing, please contact the Financial Aid office.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment Methods -->
+                <div>
+                    <h2 class="section-title">Payment Methods</h2>
+
+                    <div class="method-card">
+                        <div class="method-icon"><i class="fas fa-globe"></i></div>
+                        <div>
+                            <div class="method-title">Online Payment</div>
+                            <div class="method-desc">Virtual Account via SIAKAD (website/app).</div>
+                        </div>
+                    </div>
+
+                    <div class="method-card">
+                        <div class="method-icon"><i class="fas fa-money-bill-alt"></i></div>
+                        <div>
+                            <div class="method-title">Offline Payment</div>
+                            <div class="method-desc">Cash at JIU Finance Department.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom CTA -->
+            <div class="help-cta">
+                <p>Need help with your payments?</p>
+                <button class="btn btn-primary"
+                    style="background: #4a148c; padding: 12px 24px; border-radius: 8px; border: none; color: white; font-weight: 700; cursor: pointer; display: inline-flex; align-items: center; gap: 10px;">
+                    <i class="fas fa-headset"></i> Contact Finance Dept
+                </button>
+            </div>
+
+        </div> <!-- End Full Width Container -->
+    </main>
+
+    <!-- ── JAVASCRIPT UNTUK TABS & FAQ ── -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // 1. TABS FUNCTIONALITY
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Remove active class from all
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    // Add active class to clicked
+                    button.classList.add('active');
+                    const targetId = button.getAttribute('data-target');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+
+            // 2. FAQ ACCORDION FUNCTIONALITY
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Toggle the clicked item
+                    item.classList.toggle('active');
+
+                    // Optional: Close other items when one is opened (Accordion behavior)
+                    // faqItems.forEach(otherItem => {
+                    //     if (otherItem !== item) {
+                    //         otherItem.classList.remove('active');
+                    //     }
+                    // });
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>External Activities | JIU Student Portal</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/external-activities.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <img src="../assets/images/jiu-logo-rounded.png" alt="JIU Logo" class="brand-logo">
+            <span class="brand-name">Student Portal</span>
+        </div>
+        <div class="sidebar-nav-wrapper">
+            <nav class="sidebar-nav">
+                <a href="../dashboard.html" class="nav-item"><i class="fas fa-house"></i> Dashboard</a>
+                <div class="nav-section-label">Academics</div>
+                <a href="../calendar/calendar.html" class="nav-item"><i class="fas fa-calendar-days"></i> Calendar</a>
+                <a href="../academics/academics.html" class="nav-item"><i class="fas fa-graduation-cap"></i>
+                    Academics</a>
+                <a href="../department/department.html" class="nav-item"><i class="fas fa-building-columns"></i>
+                    Department</a>
+                <div class="nav-section-label">Finance</div>
+                <a href="../cost_of_attandance/cost_of_attandance.html" class="nav-item"><i class="fas fa-coins"></i>
+                    Cost of Attendance</a>
+                <div class="nav-section-label">Campus Life</div>
+                <a href="../student_affairs/student_affairs.html" class="nav-item"><i class="fas fa-users"></i> Student
+                    Affairs</a>
+                <a href="external_activities.html" class="nav-item active"><i class="fas fa-globe"></i> External
+                    Activities</a>
+                <a href="../student_services/student_services.html" class="nav-item"><i class="fas fa-headset"></i>
+                    Student Services</a>
+            </nav>
+        </div>
+        <div class="sidebar-bottom">
+            <a href="../settings/general.html" class="sidebar-settings">
+                <i class="fas fa-gear"></i> Settings
+            </a>
+            <div class="sidebar-user">
+                <div class="user-avatar">FP</div>
+                <div class="user-info">
+                    <div class="user-name">Firman Purba</div>
+                    <div class="user-id">ID: 2023001</div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main ea-page">
+        <!-- Breadcrumb Bar -->
+        <div class="breadcrumb-bar"
+            style="background: #e5e5e5; padding: 16px 24px; border-radius: 12px; display: flex; gap: 12px; font-weight: 700; color: #6b7280; margin-bottom: 24px; margin-top: 16px;">
+            <i class="fas fa-globe" style="font-size: 16px;"></i>
+            <span style="color: #6b7280;">External Activities</span>
+        </div>
+
+        <div class="full-width-container">
+
+            <!-- Tabs Navigation -->
+            <div class="ea-tabs">
+                <button class="tab-btn active" data-target="tab-internship">Internship Program</button>
+                <button class="tab-btn" data-target="tab-scholarship">Work Study Scholarship</button>
+                <button class="tab-btn" data-target="tab-seam">Student Exchange</button>
+            </div>
+
+            <!-- ==========================================
+                 TAB 1: INTERNSHIP PROGRAM
+            =========================================== -->
+            <div id="tab-internship" class="tab-content active">
+                <div class="ea-header-banner">
+                    <h2>JIU Student Internship Program</h2>
+                    <p>This guideline aims to establish the objectives, procedures, and management standards of the
+                        internship program conducted by Jakarta International University (JIU) to enhance students'
+                        practical skills and social adaptability through field experience related to the student's
+                        major[cite: 3].</p>
+
+                    <!-- Tombol Download Baru -->
+                    <a href="../assets/docs/JIU INTERNSHIP GUIDELINES 2025.pdf" target="_blank"
+                        class="btn-download-pdf">
+                        <i class="fas fa-file-pdf"></i> Download Internship Guideline
+                    </a>
+                </div>
+
+                <div class="ea-grid-2">
+                    <div class="ea-card">
+                        <div class="ea-card-title"><i class="fas fa-clipboard-check"></i> Registration Requirements
+                        </div>
+                        <ul class="ea-list">
+                            <li>The student has to be an active student in the current semester[cite: 3].</li>
+                            <li>The student has to complete university courses of at least 6 semesters or 80 semester
+                                credits[cite: 3].</li>
+                            <li>The student with a minimum GPA of 2.75. (For internal internship, minimum GPA of
+                                3.3)[cite: 3].</li>
+                            <li>Every student who will register for the internship must clear unpaid tuition fees,
+                                dormitory fees, and other financial liabilities of the previous semester before applying
+                                for the internship[cite: 3].</li>
+                        </ul>
+                    </div>
+                    <div class="ea-card">
+                        <div class="ea-card-title"><i class="fas fa-chart-line"></i> Evaluation Components</div>
+                        <ul class="ea-list">
+                            <li><strong>40%</strong> - Work Performance & Professionalism (evaluated by Company
+                                Supervisor)[cite: 3].</li>
+                            <li><strong>30%</strong> - Learning & Development via weekly reports (evaluated by Study
+                                Program)[cite: 3].</li>
+                            <li><strong>20%</strong> - Self-Reflection & Internship Report[cite: 3].</li>
+                            <li><strong>10%</strong> - Final Presentation[cite: 3].</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="ea-card">
+                    <div class="ea-card-title"><i class="fas fa-clock"></i> Period and Credit Hour Guidelines</div>
+                    <table class="ea-table">
+                        <thead>
+                            <tr>
+                                <th>Classification</th>
+                                <th>Period Requirement</th>
+                                <th>Academic Credit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Full-time External Internship</td>
+                                <td>Minimum 18 weeks (320 hr)[cite: 3]</td>
+                                <td>3-6 credits[cite: 3]</td>
+                            </tr>
+                            <tr>
+                                <td>Part-time External Internship</td>
+                                <td>Minimum 12 weeks (240 hr)[cite: 3]</td>
+                                <td>2-4 credits[cite: 3]</td>
+                            </tr>
+                            <tr>
+                                <td>Internal Internship</td>
+                                <td>Minimum 10 weeks (200 hr)[cite: 3]</td>
+                                <td>2-3 credits[cite: 3]</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 TAB 2: WORK STUDY SCHOLARSHIP
+            =========================================== -->
+            <div id="tab-scholarship" class="tab-content">
+                <div class="ea-header-banner" style="border-left-color: #059669; background: #ecfdf5;">
+                    <h2 style="color: #065f46;">Student Service Scholarship (Work Study)</h2>
+                    <p style="color: #047857;">One of the important purposes of the Student Work Study program is to
+                        support and aid the student who is facing financial difficulties during their educational path
+                        at JIU[cite: 1].</p>
+
+                    <!-- Tombol Download Baru -->
+                    <a href="../assets/docs/JIU Student Service Scholarship (Work Study) Guideline 2025.pdf"
+                        target="_blank" class="btn-download-pdf">
+                        <i class="fas fa-file-pdf"></i> Download Scholarship Guideline
+                    </a>
+                </div>
+
+                <div class="ea-grid-2">
+                    <div class="ea-card">
+                        <div class="ea-card-title" style="color: #059669;"><i class="fas fa-user-check"
+                                style="color: #059669;"></i> Minimum Requirements</div>
+                        <ul class="ea-list">
+                            <li>The student has to be an active student in the current semester[cite: 1].</li>
+                            <li>The student has to complete university courses of at least 1 semester or 20 semester
+                                credits[cite: 1].</li>
+                            <li>Every student who applies for Work Study must clear unpaid tuition fees, dormitory fees,
+                                and other financial liabilities of the previous semester before applying for the Work
+                                Study[cite: 1].</li>
+                        </ul>
+                    </div>
+                    <div class="ea-card">
+                        <div class="ea-card-title" style="color: #059669;"><i class="fas fa-star"
+                                style="color: #059669;"></i> Selection Guide Criteria</div>
+                        <p style="font-size: 13.5px; color: #4b5563; margin-bottom: 12px;">The department that requests
+                            students is required to use the criteria below (Total 20 points)[cite: 1]:</p>
+                        <ul class="ea-list">
+                            <li>Students' need (1-5 points)[cite: 1].</li>
+                            <li>Suitability of required skill for Work Study job (1-5 points)[cite: 1].</li>
+                            <li>Interview (1-5 points)[cite: 1].</li>
+                            <li>Dormitory point (5%)[cite: 1].</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 TAB 3: STUDENT EXCHANGE (SEAM)
+            =========================================== -->
+            <div id="tab-seam" class="tab-content">
+                <div class="ea-header-banner" style="border-left-color: #2563eb; background: #eff6ff;">
+                    <h2 style="color: #1e3a8a;">STUDENT EXCHANGE to South Korea Intake Spring 2026</h2>
+                    <p style="color: #1d4ed8;">Experience international education and embrace different cultures while
+                        representing JIU abroad[cite: 2].</p>
+
+                    <!-- Tombol Download Baru -->
+                    <a href="../assets/docs/SEAM Announcement 2026.pdf" target="_blank" class="btn-download-pdf">
+                        <i class="fas fa-file-pdf"></i> Download SEAM Announcement
+                    </a>
+                </div>
+
+                <div class="ea-grid-2">
+                    <div class="ea-card">
+                        <div class="ea-card-title" style="color: #2563eb;"><i class="fas fa-passport"
+                                style="color: #2563eb;"></i> General Requirements</div>
+                        <ul class="ea-list">
+                            <li>Sophomore and Junior students (Currently in semester 3, 4, and 5)[cite: 2].</li>
+                            <li>Minimum cumulative GPA 3.0[cite: 2].</li>
+                            <li>TOEFL score min. 71[cite: 2].</li>
+                            <li>Good Behavior. No record of university's regulation offenses or disciplinary
+                                actions[cite: 2].</li>
+                            <li>Open Minded. Embrace different culture and obey HGU's regulations[cite: 2].</li>
+                        </ul>
+                    </div>
+
+                    <div class="ea-card">
+                        <div class="ea-card-title" style="color: #2563eb;"><i class="fas fa-calendar-alt"
+                                style="color: #2563eb;"></i> Intake Timeline (2026)</div>
+                        <div class="ea-timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-date">Oct 27th - Nov 10th</div>
+                                <div class="timeline-event">Application at JIU[cite: 2]</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">Nov 11th</div>
+                                <div class="timeline-event">English Proficiency Test at JIU[cite: 2]</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">Nov 10th - 13th</div>
+                                <div class="timeline-event">Selection at JIU[cite: 2]</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">Nov 14th & 20th</div>
+                                <div class="timeline-event">Nomination & Application[cite: 2]</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-date">February 2026</div>
+                                <div class="timeline-event">Semester Begins[cite: 2]</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ea-card">
+                    <div class="ea-card-title" style="color: #2563eb;"><i class="fas fa-money-check-alt"
+                            style="color: #2563eb;"></i> Program Costs (Approximately)</div>
+                    <table class="ea-table">
+                        <tbody>
+                            <tr>
+                                <td style="font-weight: 800; width: 30%;">Tuition</td>
+                                <td>waived[cite: 2]</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 800;">Dormitory</td>
+                                <td>KRW 810,000/semester[cite: 2]</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 800;">Orientation Fee</td>
+                                <td>KRW 340,000[cite: 2]</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 800;">Meals</td>
+                                <td>± KRW 5,000-8,000/meal[cite: 2]</td>
+                            </tr>
+                            <tr>
+                                <td style="font-weight: 800;">Living Cost</td>
+                                <td>± KRW 300,000 - 500,000/month[cite: 2]</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+    </main>
+
+    <!-- ── JAVASCRIPT UNTUK TABS ── -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    button.classList.add('active');
+                    const targetId = button.getAttribute('data-target');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

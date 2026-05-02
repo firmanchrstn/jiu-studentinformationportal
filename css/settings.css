@@ -78,7 +78,6 @@
 .settings-sidebar {
     width: 280px;
     background: #fafafa;
-    /* Sedikit beda warna dengan content untuk hierarki */
     border-right: 1px solid #f3f4f6;
     padding: 32px 24px;
     display: flex;
@@ -355,7 +354,6 @@
 /* ── KUNCI LAYOUT (SCROLL MAGIC) ── */
 body {
     overflow: hidden;
-    /* Mengunci body agar tidak double-scroll */
 }
 
 .main.settings-page {
@@ -373,7 +371,6 @@ body {
     align-items: center;
     margin-bottom: 30px;
     flex-shrink: 0;
-    /* Mencegah top-bar mengecil */
     width: 100%;
 }
 
@@ -456,7 +453,6 @@ body {
     align-items: center;
     margin-bottom: 24px;
     flex-shrink: 0;
-    /* Mengunci agar tidak ikut tergulung */
 }
 
 /* ── SETTINGS CONTAINER (SCROLL HANDLER) ── */
@@ -467,9 +463,6 @@ body {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.03);
     border: 1px solid #f3f4f6;
     flex: 1;
-    /* Mengisi sisa layar */
-
-    /* RAHASIANYA DI SINI: Hapus min-height: 650px dan ganti dengan 0 */
     min-height: 0;
     overflow: hidden;
 }
@@ -493,9 +486,7 @@ body {
     padding: 40px 48px;
     background: #ffffff;
     overflow-y: auto;
-    /* Scroll aktif di sini */
     padding-bottom: 40px;
-    /* Cukup 40px agar pas sampai dasar */
 }
 
 @media (max-width: 992px) {

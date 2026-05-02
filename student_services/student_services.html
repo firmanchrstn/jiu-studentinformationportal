@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Services | JIU Student Portal</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/student-services.css">
+</head>
+
+<body>
+
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <img src="../assets/images/jiu-logo-rounded.png" alt="JIU Logo" class="brand-logo">
+            <span class="brand-name">Student Portal</span>
+        </div>
+        <div class="sidebar-nav-wrapper">
+            <nav class="sidebar-nav">
+                <a href="../dashboard.html" class="nav-item"><i class="fas fa-house"></i> Dashboard</a>
+
+                <div class="nav-section-label">Academics</div>
+                <a href="../calendar/calendar.html" class="nav-item"><i class="fas fa-calendar-days"></i> Calendar</a>
+                <a href="../academics/academics.html" class="nav-item"><i class="fas fa-graduation-cap"></i>
+                    Academics</a>
+                <a href="../department/department.html" class="nav-item"><i class="fas fa-building-columns"></i>
+                    Department</a>
+
+                <div class="nav-section-label">Finance</div>
+                <a href="../cost_of_attandance/cost_of_attandance.html" class="nav-item"><i class="fas fa-coins"></i>
+                    Cost of Attendance</a>
+
+                <div class="nav-section-label">Campus Life</div>
+                <a href="../student_affairs/student_affairs.html" class="nav-item"><i class="fas fa-users"></i> Student
+                    Affairs</a>
+                <a href="../external_activities/external_activities.html" class="nav-item"><i class="fas fa-globe"></i>
+                    External Activities</a>
+                <!-- Active Class on Student Services -->
+                <a href="student_services.html" class="nav-item active"><i class="fas fa-headset"></i> Student
+                    Services</a>
+            </nav>
+        </div>
+        <div class="sidebar-bottom">
+            <a href="../settings/general.html" class="sidebar-settings">
+                <i class="fas fa-gear"></i> Settings
+            </a>
+            <div class="sidebar-user">
+                <div class="user-avatar">FP</div>
+                <div class="user-info">
+                    <div class="user-name">Firman Purba</div>
+                    <div class="user-id">ID: 2023001</div>
+                </div>
+            </div>
+        </div>
+    </aside>
+
+    <main class="main ss-page">
+        <!-- Breadcrumb Bar (Tanpa Hero Section) -->
+        <div class="breadcrumb-bar"
+            style="background: #e5e5e5; padding: 16px 24px; border-radius: 12px; display: flex; gap: 12px; font-weight: 700; color: #6b7280; margin-bottom: 24px; margin-top: 16px;">
+            <i class="fas fa-headset" style="font-size: 16px;"></i>
+            <span style="color: #6b7280;">Student Services</span>
+        </div>
+
+        <div class="full-width-container">
+
+            <!-- Tabs Navigation -->
+            <div class="ss-tabs">
+                <button class="tab-btn active" data-target="tab-dormitory">Dormitory</button>
+                <button class="tab-btn" data-target="tab-counseling">JIU Student Counseling</button>
+                <button class="tab-btn" data-target="tab-library">Library</button>
+                <button class="tab-btn" data-target="tab-forms">Forms</button>
+                <button class="tab-btn" data-target="tab-feedback">Feedback and Report</button>
+            </div>
+
+            <!-- ==========================================
+                 TAB 1: DORMITORY
+            =========================================== -->
+            <div id="tab-dormitory" class="tab-content active">
+                <div class="ss-header-banner">
+                    <h2>Thomas House Dormitory</h2>
+                    <p>The Jakarta International University (JIU) dormitory is called Thomas House[cite: 6]. This
+                        dormitory serves as a facility for fostering and empowering JIU students in accordance with the
+                        core values of Love, Integrity, Faithfulness, and Excellence (L.I.F.E.).</p>
+                </div>
+
+                <div class="ss-grid-2">
+                    <div class="ss-card">
+                        <div class="ss-card-title"><i class="fas fa-building"></i> General & Time Rules</div>
+                        <ul class="ss-list">
+                            <li>Freshmen students are required to live in the dormitory for one year after being
+                                accepted as JIU students[cite: 6].</li>
+                            <li>Quiet Hour: Valid from 10:00 p.m. to 6:00 a.m[cite: 6]. All noisy activities must cease
+                                during this time.</li>
+                            <li>Evening Return Time: Residents must return to the dormitory the latest at 7:00 p.m. on
+                                Mondays to Thursdays; while on Fridays to Sundays latest at 8:00 p.m[cite: 6].</li>
+                        </ul>
+                    </div>
+
+                    <div class="ss-card">
+                        <div class="ss-card-title"><i class="fas fa-utensils"></i> Facilities & Conduct</div>
+                        <ul class="ss-list">
+                            <li>A mini kitchen (pantry) is available for cooking simple meals, heating food, and boiling
+                                water[cite: 6].</li>
+                            <li>Each dormitory resident receives 30 merit points at the beginning of the semester[cite:
+                                6].</li>
+                            <li>Merit points can be earned by actively participating in dormitory activities,
+                                maintaining cleanliness, and demonstrating a positive attitude[cite: 6].</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 TAB 2: JIU STUDENT COUNSELING
+            =========================================== -->
+            <div id="tab-counseling" class="tab-content">
+                <div class="ss-header-banner" style="border-left-color: #ec4899; background: #fdf2f8;">
+                    <h2 style="color: #be185d;">Facing challenges in life and studies? We're here to help!</h2>
+                    <p style="color: #9d174d;">Confidential and supportive counseling sessions designed to guide you
+                        through your university journey[cite: 4].</p>
+                </div>
+
+                <div class="ss-card">
+                    <div class="ss-card-title" style="color: #be185d;"><i class="fas fa-hands-helping"
+                            style="color: #ec4899;"></i> What We Offer</div>
+                    <ul class="ss-list">
+                        <li>Personalized guidance for your personal life, spiritual journey and academic success[cite:
+                            4].</li>
+                        <li>Confidential and supportive counseling sessions[cite: 4].</li>
+                        <li>Helping you navigate challenges in faith, studies, and life[cite: 4].</li>
+                        <li>Encouragement, wisdom, and practical strategies for growth[cite: 4].</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 TAB 3: LIBRARY
+            =========================================== -->
+            <div id="tab-library" class="tab-content">
+                <div class="ss-header-banner" style="border-left-color: #eab308; background: #fefce8;">
+                    <h2 style="color: #b45309;">Dream Blue Library (JIU Library)</h2>
+                    <p style="color: #92400e;">Location: K-Eduplex, Jl. Ganesha2, Lot B1, Deltamas, Pasirranji Village,
+                        Central Cikarang District, Bekasi Regency, West Java 17530[cite: 5].</p>
+                </div>
+
+                <div class="ss-grid-2">
+                    <div class="ss-card">
+                        <div class="ss-card-title" style="color: #b45309;"><i class="fas fa-clock"
+                                style="color: #eab308;"></i> Operational Hours & Access</div>
+                        <ul class="ss-list">
+                            <li>Regular opening hours are 08.00-17.00[cite: 5].</li>
+                            <li>Visitors can utilize OPAC to access information about the library's collection catalog
+                                by logging in to http://lib.jiu.ac/[cite: 5].</li>
+                        </ul>
+                    </div>
+
+                    <div class="ss-card">
+                        <div class="ss-card-title" style="color: #b45309;"><i class="fas fa-exclamation-triangle"
+                                style="color: #eab308;"></i> Important Rules</div>
+                        <ul class="ss-list">
+                            <li>Bringing colored and flavored food and drinks is prohibited. Only mineral water is
+                                allowed[cite: 5].</li>
+                            <li>Visitors are not allowed to adjust the air conditioning temperature in the reading rooms
+                                without permission from the librarian. The AC temperature should only be set around
+                                25-26°C[cite: 5].</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 TAB 4: FORMS
+            =========================================== -->
+            <div id="tab-forms" class="tab-content">
+                <div class="ss-header-banner" style="border-left-color: #3b82f6; background: #eff6ff;">
+                    <h2 style="color: #1d4ed8;">Document Center</h2>
+                    <p style="color: #1e40af;">Access essential university forms and documents quickly.</p>
+                </div>
+
+                <div style="max-width: 800px;">
+                    <!-- Doc 1: SSS Program Agreement -->
+                    <a href="#" class="form-item">
+                        <div class="form-info">
+                            <div class="form-icon doc"><i class="fas fa-file-word"></i></div>
+                            <div>
+                                <div class="form-name">SSS Program Agreement</div>
+                                <div class="form-type">Google Docs</div>
+                            </div>
+                        </div>
+                        <div class="form-action">Open Link <i class="fas fa-external-link-alt"
+                                style="margin-left: 4px; font-size: 10px;"></i></div>
+                    </a>
+
+                    <!-- Doc 2: Student Service Report -->
+                    <a href="#" class="form-item">
+                        <div class="form-info">
+                            <div class="form-icon sheet"><i class="fas fa-file-excel"></i></div>
+                            <div>
+                                <div class="form-name">Student Service Report Form</div>
+                                <div class="form-type">Google Spreadsheet</div>
+                            </div>
+                        </div>
+                        <div class="form-action">Open Link <i class="fas fa-external-link-alt"
+                                style="margin-left: 4px; font-size: 10px;"></i></div>
+                    </a>
+
+                    <!-- Doc 3: Deferral (GDoc) -->
+                    <a href="#" class="form-item">
+                        <div class="form-info">
+                            <div class="form-icon doc"><i class="fas fa-file-word"></i></div>
+                            <div>
+                                <div class="form-name">Tuition Fee Deferral Request</div>
+                                <div class="form-type">Google Docs</div>
+                            </div>
+                        </div>
+                        <div class="form-action">Open Link <i class="fas fa-external-link-alt"
+                                style="margin-left: 4px; font-size: 10px;"></i></div>
+                    </a>
+
+                    <!-- Doc 4: Deferral (PDF) -->
+                    <a href="#" class="form-item">
+                        <div class="form-info">
+                            <div class="form-icon pdf"><i class="fas fa-file-pdf"></i></div>
+                            <div>
+                                <div class="form-name">Tuition Fee Deferral Request</div>
+                                <div class="form-type">PDF Document</div>
+                            </div>
+                        </div>
+                        <div class="form-action">Download <i class="fas fa-download"
+                                style="margin-left: 4px; font-size: 10px;"></i></div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- ==========================================
+                 TAB 5: FEEDBACK AND REPORT
+            =========================================== -->
+            <div id="tab-feedback" class="tab-content">
+                <div class="feedback-card">
+                    <h2>Academic Affairs Needs Your Voice!</h2>
+
+                    <div class="qr-placeholder"></div>
+
+                    <p>Do you have any challenges or concerns about your class? Please share your feedback via this
+                        form.</p>
+                </div>
+            </div>
+
+        </div> <!-- End Full Width Container -->
+    </main>
+
+    <!-- ── JAVASCRIPT UNTUK TABS ── -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+
+                    button.classList.add('active');
+                    const targetId = button.getAttribute('data-target');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

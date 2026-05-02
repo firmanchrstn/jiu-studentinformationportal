@@ -1,13 +1,10 @@
 :root {
     --sidebar-bg: #76779e;
-    /* Warna ungu spesifik dari gambar */
     --sidebar-active: #626388;
-    /* Ungu gelap untuk menu aktif */
     --bg-color: #ffffff;
     --text-main: #2d3748;
     --text-muted: #718096;
     --purple-accent: #6b21a8;
-    /* Warna ungu untuk icon/view all */
     --border-color: #edf2f7;
 }
 
@@ -35,15 +32,10 @@ body {
     padding: 30px 0;
     position: fixed;
 
-    /* Membuatnya mengambang dan melengkung */
     height: calc(100vh - 40px);
-    /* Mengurangi tinggi layar untuk margin atas-bawah */
     left: 20px;
-    /* Jarak dari kiri layar */
     top: 20px;
-    /* Jarak dari atas layar */
     border-radius: 20px;
-    /* Sudut melengkung di keempat ujungnya */
 }
 
 .sidebar-brand {
@@ -67,7 +59,6 @@ body {
     object-fit: cover;
 }
 
-/* Trik Menyembunyikan Scrollbar */
 .sidebar-nav-wrapper {
     flex: 1;
     overflow-y: auto;
@@ -78,7 +69,6 @@ body {
     -ms-overflow-style: none;
 }
 
-/* Chrome, Safari, Edge */
 .sidebar-nav-wrapper::-webkit-scrollbar {
     display: none;
 }
@@ -92,20 +82,17 @@ body {
     padding: 15px 24px 8px;
 }
 
-/* Nav Item (Rounded Box) */
 .nav-item {
     display: flex;
     align-items: center;
     gap: 12px;
     padding: 12px 20px;
     margin: 0 16px 4px;
-    /* Margin kiri-kanan agar tidak mentok */
     color: rgba(255, 255, 255, 0.9);
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
     border-radius: 8px;
-    /* Sudut membulat seperti di gambar */
     transition: 0.2s;
 }
 
@@ -182,36 +169,27 @@ body {
 .hero-wrapper {
     position: sticky;
     top: 0;
-    /* Menempel erat di atap layar */
     padding-top: 20px;
-    /* Mendorong banner sejajar dengan sidebar (top: 20px) */
     padding-bottom: 25px;
-    /* Jarak banner ke teks intro */
     background: var(--bg-color);
-    /* Menutupi teks yang di-scroll agar tidak bocor */
     z-index: 50;
-    /* Memastikan banner selalu berada di lapisan paling depan */
 }
 
 /* Banner */
 .hero {
     border-radius: 20px;
-    /* Lengkungan disamakan persis dengan sidebar */
     height: 220px;
     background: url('../assets/images/campus-bg.jpg') center/cover no-repeat;
     background-color: #9ca3af;
-    /* Fallback warna abu-abu sesuai gambar jika gambar gagal load */
     position: relative;
     overflow: hidden;
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
-    /* Shadow halus agar terlihat melayang di atas konten */
 }
 
 .hero-overlay {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.2);
-    /* Gelapkan sedikit untuk readability teks */
 }
 
 .hero-content {
@@ -234,7 +212,6 @@ body {
 }
 
 .intro-text {
-    /* Sedikit penyesuaian margin karena padding bawah sudah ada di hero-wrapper */
     text-align: center;
     max-width: 800px;
     margin: 0 auto 30px;
@@ -429,18 +406,18 @@ body {
 }
 
 .sidebar-settings {
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 20px;
     display: flex;
-    gap: 12px;
     align-items: center;
-    cursor: pointer;
-    color: rgba(255, 255, 255, 0.8);
-    /* Warna default */
+    gap: 12px;
+    padding: 12px 16px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: #d1d5db;
     text-decoration: none;
-    /* Menghilangkan garis bawah link */
-    transition: 0.2s;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    margin-bottom: 24px;
 }
 
 .sidebar-settings:hover {
@@ -461,18 +438,17 @@ body {
 
 .nav-item i,
 .sidebar-settings i {
+    width: 20px;
+    font-size: 16px;
     color: rgba(255, 255, 255, 0.45);
-    /* Ikon sedikit lebih redup dari teksnya */
     transition: all 0.25s ease;
+    text-align: center;
 }
 
-/* 2. Kondisi Hover (Saat Disorot Kursor) */
 .nav-item:hover,
 .sidebar-settings:hover {
     color: rgba(255, 255, 255, 0.95);
-    /* Hampir putih penuh saat disorot */
     background: rgba(255, 255, 255, 0.05);
-    /* Highlight sangat tipis */
 }
 
 .nav-item:hover i,
@@ -480,17 +456,12 @@ body {
     color: rgba(255, 255, 255, 0.95);
 }
 
-/* 3. Kondisi Active (Sedang Dipilih) */
 .nav-item.active,
 .sidebar-settings.active {
     color: #ffffff;
-    /* Putih solid 100% */
     font-weight: 700;
-    /* Ditebalkan */
     background: rgba(255, 255, 255, 0.15);
-    /* Background highlight */
     border-radius: 10px;
-    /* Pastikan sudut background melengkung */
 }
 
 .nav-item.active i,
@@ -501,7 +472,6 @@ body {
 /* 4. Label Section (Academics, Finance, dll) */
 .nav-section-label {
     color: rgba(255, 255, 255, 0.4);
-    /* Sangat redup agar tidak mengganggu menu utama */
     font-size: 11px;
     font-weight: 800;
     text-transform: uppercase;

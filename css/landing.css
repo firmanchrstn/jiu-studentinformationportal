@@ -5,7 +5,7 @@
     width: 100%;
     /* Background setup with dark overlay */
     background: linear-gradient(var(--overlay-dark), var(--overlay-dark)), 
-                url('../assets/images/campus-bg.jpg'); /* Ensure this path is correct */
+                url('../assets/images/campus-bg.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
