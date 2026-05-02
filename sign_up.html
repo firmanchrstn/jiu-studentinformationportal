@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account | JIU Student Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body>
+
+    <div class="auth-layout">
+        <!-- Banner Kiri -->
+        <div class="auth-banner">
+            <div class="banner-content">
+                <div class="banner-subtitle">Jakarta International University</div>
+                <h1 class="banner-title">The journey to excellence begins here.</h1>
+                <p class="banner-desc">Access your academic record, course registration, and campus resources through
+                    the Scholar Core unified portal.</p>
+            </div>
+        </div>
+
+        <!-- Panel Form Kanan -->
+        <div class="auth-panel">
+            <div class="auth-header">
+                <div class="auth-logo-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="auth-logo-text">Student Information Portal</div>
+            </div>
+
+            <div class="auth-form-wrapper" style="max-width: 460px;"> <!-- Dibuat sedikit lebih lebar -->
+                <h2 class="auth-title">Create Account</h2>
+                <p class="auth-subtitle">Make Sure You Are Register With Your JIU's Account</p>
+
+                <!-- Langsung input tanpa auth-card sesuai gambar -->
+                <form action="index.html" method="GET">
+
+                    <div class="input-group">
+                        <div class="input-label">Full Name</div>
+                        <input type="text" class="input-field" placeholder="John Doe" required>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-label">Student ID Number</div>
+                        <input type="text" class="input-field" placeholder="SC-2024-XXXX" required>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-label">Institutional Email Address</div>
+                        <input type="email" class="input-field" placeholder="j.doe@jiu.ac.id" required>
+                    </div>
+
+                    <div class="input-group">
+                        <div class="input-label">Create Password</div>
+                        <input type="password" class="input-field" placeholder="••••••••" required>
+                    </div>
+
+                    <div class="checkbox-group" style="margin-top: 10px;">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy
+                                Policy</a> of Scholar Core.</label>
+                    </div>
+
+                    <button type="submit" class="btn-auth">Create Account <i class="fas fa-arrow-right"
+                            style="margin-left: 6px; font-size: 12px;"></i></button>
+                </form>
+
+                <div class="auth-switch" style="margin-top: 32px;">
+                    Already have an account? <a href="sign_in.html">Sign In</a>
+                </div>
+            </div>
+
+            <!-- Footer Links -->
+            <div class="auth-footer">
+                <a href="#">HELP</a>
+                <a href="#">PRIVACY</a>
+                <a href="#">ACCESSIBILITY</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

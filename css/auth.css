@@ -1,0 +1,317 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Manrope', sans-serif;
+    background-color: #f8fafc;
+    overflow: hidden;
+}
+
+.auth-layout {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* ── LEFT BANNER ── */
+.auth-banner {
+    flex: 1;
+    position: relative;
+    background: url('../assets/images/campus-bg.jpg') center/cover no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 60px;
+    color: white;
+    overflow: hidden;
+}
+
+.auth-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(100deg, rgba(74, 20, 140, 0.85), rgba(49, 17, 92, 0.95));
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    max-width: 500px;
+}
+
+.banner-subtitle {
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #e9d5ff;
+}
+
+.banner-title {
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -2px;
+}
+
+.banner-desc {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #d8b4fe;
+}
+
+/* ── RIGHT PANEL (FORM AREA) ── */
+.auth-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: #f8fafc;
+}
+
+.auth-header {
+    padding: 32px 40px 0;
+    /* Padding diperkecil agar form lebih leluasa */
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.auth-logo-icon {
+    width: 36px;
+    height: 36px;
+    background: #2b3066;
+    color: white;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.auth-logo-text {
+    font-size: 18px;
+    font-weight: 800;
+    color: #2b3066;
+}
+
+/* Form Wrapper menggunakan margin: auto agar otomatis berada di tengah layar vertikal */
+.auth-form-wrapper {
+    margin: auto;
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+}
+
+.auth-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 6px;
+    letter-spacing: -1px;
+}
+
+.auth-subtitle {
+    font-size: 13.5px;
+    color: #6b7280;
+    margin-bottom: 24px;
+}
+
+/* Sign In specific white card */
+.auth-card {
+    background: white;
+    padding: 28px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+    border: 1px solid #f3f4f6;
+    margin-bottom: 24px;
+}
+
+/* ── FORM ELEMENTS ── */
+.input-group {
+    margin-bottom: 16px;
+    /* Jarak diperkecil sedikit agar Sign Up muat tanpa scroll */
+    position: relative;
+}
+
+.input-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    font-weight: 800;
+    color: #4b5563;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.input-label a {
+    color: #2b3066;
+    text-decoration: none;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px 16px;
+    background: #f1f5f9;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: inherit;
+    color: #111827;
+    box-sizing: border-box;
+    transition: all 0.2s;
+}
+
+.input-field:focus {
+    outline: none;
+    border-color: #cbd5e1;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(43, 48, 102, 0.05);
+}
+
+.input-with-icon .input-field {
+    padding-left: 44px;
+}
+
+.input-icon-left {
+    position: absolute;
+    left: 16px;
+    top: 34px;
+    color: #9ca3af;
+}
+
+.input-icon-right {
+    position: absolute;
+    right: 16px;
+    top: 34px;
+    color: #9ca3af;
+    cursor: pointer;
+}
+
+/* Checkbox */
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.checkbox-group input {
+    width: 16px;
+    height: 16px;
+    accent-color: #2b3066;
+    cursor: pointer;
+}
+
+.checkbox-group label {
+    font-size: 12px;
+    color: #4b5563;
+    cursor: pointer;
+}
+
+.checkbox-group a {
+    color: #2b3066;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* Button */
+.btn-auth {
+    width: 100%;
+    padding: 14px;
+    background: #2b3066;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-auth:hover {
+    background: #1e224a;
+}
+
+/* Switch Auth Link */
+.auth-switch {
+    text-align: center;
+    font-size: 13.5px;
+    color: #6b7280;
+}
+
+.auth-switch a {
+    color: #2b3066;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+/* ── FOOTER LINKS ── */
+.auth-footer {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 24px;
+    font-size: 11px;
+    font-weight: 800;
+    color: #9ca3af;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+}
+
+.auth-footer a {
+    color: inherit;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.auth-footer a:hover {
+    color: #4b5563;
+}
+
+/* ── RESPONSIVE (KHUSUS HP BISA SCROLL KARENA KEYBOARD MUNCUL) ── */
+@media (max-width: 900px) {
+
+    body,
+    html,
+    .auth-layout,
+    .auth-panel {
+        height: auto;
+        overflow-y: auto;
+        /* Kembalikan scroll khusus untuk HP agar tidak terpotong */
+    }
+
+    .auth-banner {
+        display: none;
+    }
+
+    .auth-header {
+        padding: 30px 20px 20px;
+        justify-content: center;
+    }
+
+    .auth-form-wrapper {
+        padding: 10px 20px 40px;
+        margin: 0 auto;
+    }
+}
+
+.auth-logo-img {
+    height: 48px;
+    width: auto;
+    object-fit: contain;
+    display: block;
+}
