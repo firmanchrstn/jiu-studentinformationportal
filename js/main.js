@@ -53,3 +53,4 @@ document.addEventListener('DOMContentLoaded', () => {
     updateDynamicGreeting();
     // (Pastikan fungsi IntersectionObserver untuk counter animasi tetap ada di bawah sini)
 });
+

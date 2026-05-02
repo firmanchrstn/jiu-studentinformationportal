@@ -34,3 +34,4 @@ const counterObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.5 });
 
 counters.forEach(counter => counterObserver.observe(counter));
+

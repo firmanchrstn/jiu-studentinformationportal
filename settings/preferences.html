@@ -95,14 +95,14 @@
             <!-- Secondary Sidebar -->
             <aside class="settings-sidebar">
                 <a href="general.html" class="settings-link"><i class="fas fa-info-circle"></i> General Information</a>
-
-                <!-- Class ACTIVE dipindah ke sini -->
                 <a href="preferences.html" class="settings-link active"><i class="fas fa-sliders-h"></i> Preferences</a>
-
                 <a href="security.html" class="settings-link"><i class="fas fa-shield-alt"></i> Security</a>
                 <a href="notifications.html" class="settings-link"><i class="far fa-bell"></i> Notifications</a>
                 <a href="account.html" class="settings-link"><i class="far fa-user"></i> Account</a>
                 <a href="manager.html" class="settings-link"><i class="fas fa-user-cog"></i> Account Manager</a>
+                <a href="#" class="settings-nav-item logout-trigger" id="logoutBtn">
+                    <i class="fas fa-sign-out-alt"></i> Log Out
+                </a>
             </aside>
 
             <!-- Content Form -->
@@ -173,7 +173,86 @@
 
             </div> <!-- Akhir dari settings-content -->
         </div> <!-- Akhir dari settings-container -->
+        <!-- ── LOGOUT CONFIRMATION MODAL ── -->
+        <div id="logoutModal" class="modal-overlay">
+            <div class="modal-card">
+                <div class="modal-header">
+                    <h3>Confirm Log Out</h3>
+                    <button id="closeModalBtn" class="close-btn"><i class="fas fa-times"></i></button>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to leave? Please type <strong>Log Out</strong> to confirm.</p>
+                    <input type="text" id="logoutInput" placeholder="Type 'Log Out' here" autocomplete="off">
+                </div>
+                <div class="modal-footer">
+                    <button id="cancelLogoutBtn" class="btn-cancel">Cancel</button>
+                    <button id="confirmLogoutBtn" class="btn-danger" disabled>Log Out</button>
+                </div>
+            </div>
+        </div>
     </main>
+    <!-- Letakkan tepat sebelum </body> -->
+    <script>
+        // Langsung jalankan script (tidak perlu menunggu DOMContentLoaded jika diletakkan di paling bawah)
+        const logoutBtn = document.getElementById('logoutBtn');
+        const logoutModal = document.getElementById('logoutModal');
+        const cancelLogoutBtn = document.getElementById('cancelLogoutBtn');
+        const logoutInput = document.getElementById('logoutInput');
+        const confirmLogoutBtn = document.getElementById('confirmLogoutBtn');
+
+        // Pastikan semua elemen ditemukan
+        if (logoutBtn && logoutModal) {
+
+            // 1. Fungsi Membuka Modal
+            logoutBtn.addEventListener('click', function (e) {
+                e.preventDefault();
+                logoutModal.classList.add('active'); // Munculkan modal
+                logoutInput.value = ''; // Kosongkan input
+                confirmLogoutBtn.disabled = true; // Kunci tombol
+                // Fokuskan kursor ke input otomatis
+                setTimeout(function () { logoutInput.focus(); }, 100);
+            });
+
+            // 2. Fungsi Menutup Modal (Klik tombol Cancel)
+            cancelLogoutBtn.addEventListener('click', function () {
+                logoutModal.classList.remove('active');
+            });
+
+            // (Opsional) Tutup modal jika klik background gelapnya
+            logoutModal.addEventListener('click', function (e) {
+                if (e.target === logoutModal) {
+                    logoutModal.classList.remove('active');
+                }
+            });
+
+            // 3. Logika Verifikasi Input "Log Out"
+            logoutInput.addEventListener('input', function (e) {
+                if (e.target.value === 'Log Out') {
+                    confirmLogoutBtn.disabled = false; // Buka kunci jika benar
+                } else {
+                    confirmLogoutBtn.disabled = true; // Kunci jika salah
+                }
+            });
+
+            // 4. Aksi Eksekusi Log Out
+            confirmLogoutBtn.addEventListener('click', function () {
+                if (logoutInput.value === 'Log Out') {
+                    // Arahkan keluar menuju halaman login (index.html)
+                    // Jika file ini di dalam folder settings, gunakan '../index.html'
+                    window.location.href = '../index.html';
+                }
+            });
+
+            // 5. Fitur Tekan 'Enter'
+            logoutInput.addEventListener('keypress', function (e) {
+                if (e.key === 'Enter' && !confirmLogoutBtn.disabled) {
+                    confirmLogoutBtn.click();
+                }
+            });
+        } else {
+            console.error("Logout Element Not Found. Cek kembali ID HTML-nya.");
+        }
+    </script>
 
 </body>
 

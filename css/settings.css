@@ -582,3 +582,346 @@ body {
 .settings-content::-webkit-scrollbar-thumb:hover {
     background: #9ca3af;
 }
+
+/* ── LOGOUT BUTTON & MODAL STYLES ── */
+
+/* Warna merah khusus untuk tombol Log Out di sidebar */
+/* ── LOGOUT TRIGGER IN SIDEBAR (FIXED) ── */
+.logout-trigger {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    width: 100%;
+    /* Memaksa kotak selebar sidebar */
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: #ef4444 !important;
+    /* Merah cerah */
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s ease;
+    margin-bottom: 24px;
+    /* Memberi jarak dengan profil di bawahnya */
+}
+
+/* Memastikan ikon tetap di posisinya dan berwarna merah */
+.logout-trigger i {
+    font-size: 16px;
+    width: 20px;
+    text-align: center;
+    color: #ef4444 !important;
+    transition: all 0.2s ease;
+}
+
+/* Efek Hover: Background Merah Transparan & Teks Merah Gelap */
+.logout-trigger:hover {
+    background-color: rgba(239, 68, 68, 0.15) !important;
+    color: #dc2626 !important;
+    /* Merah sedikit lebih gelap saat di-hover */
+}
+
+.logout-trigger:hover i {
+    color: #dc2626 !important;
+}
+
+/* Modal Overlay (Background Gelap) */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(17, 24, 39, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(4px);
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Modal Card */
+.modal-card {
+    background: white;
+    border-radius: 16px;
+    width: 100%;
+    max-width: 400px;
+    padding: 24px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.modal-overlay.active .modal-card {
+    transform: translateY(0);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.modal-header h3 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 800;
+    color: #111827;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #9ca3af;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.close-btn:hover {
+    color: #111827;
+}
+
+.modal-body p {
+    font-size: 14px;
+    color: #4b5563;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+#logoutInput {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 14px;
+    font-family: 'Manrope', sans-serif;
+    box-sizing: border-box;
+    transition: all 0.2s;
+}
+
+#logoutInput:focus {
+    outline: none;
+    border-color: #dc2626;
+    box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.1);
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+/* Modal Buttons */
+.btn-cancel {
+    background: #f3f4f6;
+    color: #4b5563;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.btn-cancel:hover {
+    background: #e5e7eb;
+}
+
+.btn-danger {
+    background: #dc2626;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    transition: 0.2s;
+}
+
+.btn-danger:hover {
+    background: #b91c1c;
+}
+
+.btn-danger:disabled {
+    background: #fca5a5;
+    cursor: not-allowed;
+}
+
+/* ── LOGOUT TRIGGER IN SIDEBAR ── */
+.logout-trigger {
+    color: #ef4444 !important;
+    /* Warna merah */
+    margin-top: auto;
+    /* Mendorong tombol ke bawah jika ada sisa ruang */
+}
+
+.logout-trigger i {
+    color: #ef4444 !important;
+}
+
+.logout-trigger:hover {
+    background: rgba(239, 68, 68, 0.1) !important;
+}
+
+/* ── PREMIUM MODAL STYLES ── */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(15, 23, 42, 0.4);
+    /* Warna biru gelap transparan */
+    backdrop-filter: blur(8px);
+    /* Efek blur premium ala Apple/Vercel */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-card {
+    background: white;
+    border-radius: 24px;
+    width: 100%;
+    max-width: 400px;
+    padding: 32px;
+    text-align: center;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transform: scale(0.95) translateY(10px);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-overlay.active .modal-card {
+    transform: scale(1) translateY(0);
+}
+
+/* Ikon Bulat di Atas */
+.modal-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.modal-icon {
+    width: 56px;
+    height: 56px;
+    background: #fef2f2;
+    color: #dc2626;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    box-shadow: 0 0 0 8px #fff5f5;
+}
+
+.modal-title {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    font-weight: 800;
+    color: #111827;
+}
+
+.modal-desc {
+    font-size: 14px;
+    color: #6b7280;
+    line-height: 1.6;
+    margin: 0 0 24px 0;
+}
+
+.modal-desc strong {
+    color: #111827;
+}
+
+/* Input Field Modern */
+.modal-input-group {
+    margin-bottom: 24px;
+}
+
+#logoutInput {
+    width: 100%;
+    padding: 14px 16px;
+    background: #f9fafb;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: inherit;
+    font-weight: 600;
+    text-align: center;
+    color: #111827;
+    box-sizing: border-box;
+    transition: all 0.2s;
+}
+
+#logoutInput:focus {
+    outline: none;
+    border-color: #dc2626;
+    background: white;
+    box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.1);
+}
+
+/* Tombol Berdampingan */
+.modal-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.btn-cancel,
+.btn-danger {
+    flex: 1;
+    padding: 14px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: none;
+}
+
+.btn-cancel {
+    background: #f3f4f6;
+    color: #374151;
+}
+
+.btn-cancel:hover {
+    background: #e5e7eb;
+    color: #111827;
+}
+
+.btn-danger {
+    background: #dc2626;
+    color: white;
+}
+
+.btn-danger:hover {
+    background: #b91c1c;
+}
+
+.btn-danger:disabled {
+    background: #fca5a5;
+    color: #fef2f2;
+    cursor: not-allowed;
+}
