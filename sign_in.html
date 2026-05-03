@@ -27,7 +27,7 @@
         <!-- Panel Form Kanan -->
         <div class="auth-panel">
             <div class="auth-header">
-                <div class="auth-logo-icon"><i class="fas fa-graduation-cap"></i></div>
+                <img src="assets/images/jiu-logo.png" alt="JIU Logo" class="auth-logo-img">
                 <div class="auth-logo-text">Student Information Portal</div>
             </div>
 
@@ -37,12 +37,14 @@
 
                 <!-- Box Putih Khusus Sign In -->
                 <div class="auth-card">
-                    <form action="dashboard.html" method="GET">
+                    <!-- Gunakan ID signinForm agar terbaca oleh JavaScript Firebase -->
+                    <form id="signinForm">
 
                         <div class="input-group input-with-icon">
                             <div class="input-label">Student ID or Email</div>
                             <i class="far fa-user input-icon-left"></i>
-                            <input type="text" class="input-field" placeholder="e.g. ST12345 or student@jiu.ac.id"
+                            <!-- Tambahkan ID signinEmail -->
+                            <input type="email" id="signinEmail" class="input-field" placeholder="e.g. student@jiu.ac"
                                 required>
                         </div>
 
@@ -52,7 +54,9 @@
                                 <a href="#">Forgot password?</a>
                             </div>
                             <i class="fas fa-lock input-icon-left"></i>
-                            <input type="password" class="input-field" placeholder="••••••••" required>
+                            <!-- Tambahkan ID signinPassword -->
+                            <input type="password" id="signinPassword" class="input-field" placeholder="••••••••"
+                                required>
                             <i class="far fa-eye input-icon-right"></i>
                         </div>
 
@@ -79,6 +83,65 @@
         </div>
     </div>
 
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "firebase/app";
+        import { getAnalytics } from "firebase/analytics";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyC4aRKlU63TNJ0I3HavjWYMEIY1B73f0Zc",
+            authDomain: "jiu-studentinformationportal.firebaseapp.com",
+            databaseURL: "https://jiu-studentinformationportal.web.app",
+            projectId: "jiu-studentinformationportal",
+            storageBucket: "jiu-studentinformationportal.firebasestorage.app",
+            messagingSenderId: "800309587973",
+            appId: "1:800309587973:web:444123dcc504a03950ac6c",
+            measurementId: "G-NQJ2BBJ4LP"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        const signupForm = document.getElementById('signupForm');
+
+        signupForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            const name = document.getElementById('signupName').value;
+            const studentId = document.querySelector('input[placeholder="SC-2024-XXXX"]').value; // Ambil nilai NIM
+            const email = document.getElementById('signupEmail').value;
+            const password = document.getElementById('signupPassword').value;
+
+            if (!email.endsWith('@jiu.ac')) {
+                alert("Registration failed! Only institutional emails (@jiu.ac) are allowed.");
+                return;
+            }
+
+            createUserWithEmailAndPassword(auth, email, password)
+                .then(async (userCredential) => {
+                    const user = userCredential.user;
+                    await updateProfile(user, { displayName: name });
+
+                    // 2. Simpan Data Profil ke Firestore
+                    // Membuat folder 'users' dan menamai dokumennya dengan UID user tersebut
+                    await setDoc(doc(db, "users", user.uid), {
+                        fullName: name,
+                        studentID: studentId,
+                        email: email,
+                        role: "student",
+                        createdAt: new Date()
+                    });
+                })
+                .then(() => {
+                    alert("Account created successfully! You can now log in.");
+                    window.location.href = "sign_in.html";
+                })
+                .catch((error) => {
+                    alert("Error: " + error.message);
+                });
+        });
+    </script>
 </body>
 
 </html>
