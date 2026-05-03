@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In | JIU Student Portal</title>
+    <!-- Preconnect untuk kecepatan render font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet" />
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="css/auth.css">
 </head>
@@ -14,7 +17,7 @@
 <body>
 
     <div class="auth-layout">
-        <!-- Banner Kiri -->
+        <!-- Banner -->
         <div class="auth-banner">
             <div class="banner-content">
                 <div class="banner-subtitle">Jakarta International University</div>
@@ -24,7 +27,7 @@
             </div>
         </div>
 
-        <!-- Panel Form Kanan -->
+        <!-- Form Panel -->
         <div class="auth-panel">
             <div class="auth-header">
                 <img src="assets/images/jiu-logo.png" alt="JIU Logo" class="auth-logo-img">
@@ -33,48 +36,44 @@
 
             <div class="auth-form-wrapper">
                 <h2 class="auth-title">Sign In</h2>
-                <p class="auth-subtitle">Make Sure You Are Login With Your JIU's Account</p>
+                <p class="auth-subtitle">Make sure you log in with your official JIU account.</p>
 
-                <!-- Box Putih Khusus Sign In -->
-                <div class="auth-card">
-                    <!-- Gunakan ID signinForm agar terbaca oleh JavaScript Firebase -->
-                    <form id="signinForm">
-
-                        <div class="input-group input-with-icon">
-                            <div class="input-label">Student Email</div>
+                <form id="signinForm">
+                    <div class="input-group input-with-icon">
+                        <div class="input-label">Student Email</div>
+                        <div class="input-wrapper">
                             <i class="far fa-user input-icon-left"></i>
-                            <!-- ID signinEmail untuk JavaScript -->
                             <input type="email" id="signinEmail" class="input-field" placeholder="e.g. student@jiu.ac"
                                 required>
                         </div>
+                    </div>
 
-                        <div class="input-group input-with-icon">
-                            <div class="input-label">
-                                <span>Password</span>
-                                <a href="auth/help.html">Forgot password?</a>
-                            </div>
+                    <div class="input-group input-with-icon">
+                        <div class="input-label">
+                            <span>Password</span>
+                            <a href="auth/help.html">Forgot password?</a>
+                        </div>
+                        <div class="input-wrapper">
                             <i class="fas fa-lock input-icon-left"></i>
-                            <!-- ID signinPassword untuk JavaScript -->
                             <input type="password" id="signinPassword" class="input-field" placeholder="••••••••"
                                 required>
                             <i class="far fa-eye input-icon-right"></i>
                         </div>
+                    </div>
 
-                        <div class="checkbox-group">
-                            <input type="checkbox" id="remember">
-                            <label for="remember">Remember me for 30 days</label>
-                        </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me for 30 days</label>
+                    </div>
 
-                        <button type="submit" class="btn-auth">Sign In</button>
-                    </form>
-                </div>
+                    <button type="submit" class="btn-auth">Sign In</button>
+                </form>
 
                 <div class="auth-switch">
                     New to the platform? <a href="sign_up.html">Create an account</a>
                 </div>
             </div>
 
-            <!-- Footer Links -->
             <div class="auth-footer">
                 <a href="auth/help.html">HELP</a>
                 <a href="auth/privacy.html">PRIVACY</a>
@@ -83,13 +82,11 @@
         </div>
     </div>
 
-    <!-- ── SCRIPT FIREBASE LOGIN ── -->
+    <!-- Firebase Script -->
     <script type="module">
-        // Import menggunakan URL CDN
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
         import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
 
-        // Config Firebase yang sudah dikoreksi URL databasenya
         const firebaseConfig = {
             apiKey: "AIzaSyC4aRKlU63TNJ0I3HavjWYMEIY1B73f0Zc",
             authDomain: "jiu-studentinformationportal.firebaseapp.com",
@@ -97,40 +94,29 @@
             projectId: "jiu-studentinformationportal",
             storageBucket: "jiu-studentinformationportal.firebasestorage.app",
             messagingSenderId: "800309587973",
-            appId: "1:800309587973:web:444123dcc504a03950ac6c",
-            measurementId: "G-NQJ2BBJ4LP"
+            appId: "1:800309587973:web:444123dcc504a03950ac6c"
         };
 
-        // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
-
-        // Ambil elemen form Sign In
         const signinForm = document.getElementById('signinForm');
 
         signinForm.addEventListener('submit', (e) => {
             e.preventDefault();
-
-            // Ambil data dari input form Sign In
             const email = document.getElementById('signinEmail').value;
             const password = document.getElementById('signinPassword').value;
 
-            // Validasi Domain Email JIU
             if (!email.endsWith('@jiu.ac')) {
                 alert("Access denied! Please use your institutional email (@jiu.ac) to sign in.");
                 return;
             }
 
-            // Eksekusi Login
             signInWithEmailAndPassword(auth, email, password)
-                .then((userCredential) => {
-                    // Jika login berhasil, langsung arahkan ke Dashboard
+                .then(() => {
                     window.location.href = "dashboard.html";
                 })
                 .catch((error) => {
-                    // Jika password salah atau email belum terdaftar
                     alert("Invalid Email or Password. Please try again.");
-                    console.error(error.message);
                 });
         });
     </script>

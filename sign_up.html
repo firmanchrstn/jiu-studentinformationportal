@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account | JIU Student Portal</title>
+    <!-- Preconnect untuk kecepatan render font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet" />
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="css/auth.css">
 </head>
@@ -14,7 +17,7 @@
 <body>
 
     <div class="auth-layout">
-        <!-- Banner Kiri -->
+        <!-- Banner -->
         <div class="auth-banner">
             <div class="banner-content">
                 <div class="banner-subtitle">Jakarta International University</div>
@@ -24,58 +27,66 @@
             </div>
         </div>
 
-        <!-- Panel Form Kanan -->
+        <!-- Form Panel -->
         <div class="auth-panel">
             <div class="auth-header">
                 <img src="assets/images/jiu-logo.png" alt="JIU Logo" class="auth-logo-img">
                 <div class="auth-logo-text">Student Information Portal</div>
             </div>
 
-            <div class="auth-form-wrapper" style="max-width: 460px;">
+            <div class="auth-form-wrapper">
                 <h2 class="auth-title">Create Account</h2>
-                <p class="auth-subtitle">Make Sure You Are Register With Your JIU's Account</p>
+                <p class="auth-subtitle">Make sure you register with your official JIU account.</p>
 
-                <!-- Gunakan ID signupForm agar terbaca oleh JavaScript Firebase -->
                 <form id="signupForm">
-
                     <div class="input-group">
                         <div class="input-label">Full Name</div>
-                        <input type="text" id="signupName" class="input-field" placeholder="John Doe" required>
+                        <div class="input-wrapper">
+                            <input type="text" id="signupName" class="input-field" placeholder="e.g. John Doe" required>
+                        </div>
                     </div>
 
                     <div class="input-group">
                         <div class="input-label">Student ID Number</div>
-                        <!-- Perbaikan: Menambahkan id="signupStudentId" -->
-                        <input type="text" id="signupStudentId" class="input-field" placeholder="SC-2024-XXXX" required>
+                        <div class="input-wrapper">
+                            <input type="text" id="signupStudentId" class="input-field" placeholder="SC-2024-XXXX"
+                                required>
+                        </div>
                     </div>
 
                     <div class="input-group">
-                        <div class="input-label">Institutional Email Address</div>
-                        <input type="email" id="signupEmail" class="input-field" placeholder="j.doe@jiu.ac" required>
+                        <div class="input-label">Institutional Email</div>
+                        <div class="input-wrapper">
+                            <input type="email" id="signupEmail" class="input-field" placeholder="j.doe@jiu.ac"
+                                required>
+                        </div>
                     </div>
 
-                    <div class="input-group">
+                    <div class="input-group input-with-icon">
                         <div class="input-label">Create Password</div>
-                        <input type="password" id="signupPassword" class="input-field" placeholder="••••••••" required
-                            minlength="6">
+                        <div class="input-wrapper">
+                            <i class="fas fa-lock input-icon-left"></i>
+                            <input type="password" id="signupPassword" class="input-field" placeholder="••••••••"
+                                required minlength="6">
+                        </div>
                     </div>
 
-                    <div class="checkbox-group" style="margin-top: 10px;">
+                    <div class="checkbox-group">
                         <input type="checkbox" id="terms" required>
                         <label for="terms">I agree to the <a href="auth/help.html">Terms of Service</a> and <a
                                 href="auth/privacy.html">Privacy Policy</a>.</label>
                     </div>
 
-                    <button type="submit" class="btn-auth">Create Account <i class="fas fa-arrow-right"
-                            style="margin-left: 6px; font-size: 12px;"></i></button>
+                    <button type="submit" class="btn-auth">
+                        Create Account <i class="fas fa-arrow-right"></i>
+                    </button>
                 </form>
 
-                <div class="auth-switch" style="margin-top: 32px;">
+                <div class="auth-switch">
                     Already have an account? <a href="sign_in.html">Sign In</a>
                 </div>
             </div>
 
-            <!-- Footer Links -->
             <div class="auth-footer">
                 <a href="auth/help.html">HELP</a>
                 <a href="auth/privacy.html">PRIVACY</a>
@@ -84,14 +95,12 @@
         </div>
     </div>
 
-    <!-- ── SCRIPT FIREBASE REGISTER & DATABASE ── -->
+    <!-- Firebase Script -->
     <script type="module">
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
         import { getAuth, createUserWithEmailAndPassword, updateProfile } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
-        // Perbaikan: Import fungsi Realtime Database
         import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
 
-        // Perbaikan: Config Firebase dengan databaseURL yang tepat
         const firebaseConfig = {
             apiKey: "AIzaSyC4aRKlU63TNJ0I3HavjWYMEIY1B73f0Zc",
             authDomain: "jiu-studentinformationportal.firebaseapp.com",
@@ -99,13 +108,12 @@
             projectId: "jiu-studentinformationportal",
             storageBucket: "jiu-studentinformationportal.firebasestorage.app",
             messagingSenderId: "800309587973",
-            appId: "1:800309587973:web:444123dcc504a03950ac6c",
-            measurementId: "G-NQJ2BBJ4LP"
+            appId: "1:800309587973:web:444123dcc504a03950ac6c"
         };
 
         const app = initializeApp(firebaseConfig);
         const auth = getAuth(app);
-        const db = getDatabase(app); // Inisialisasi Realtime Database
+        const db = getDatabase(app);
 
         const signupForm = document.getElementById('signupForm');
 
@@ -113,25 +121,20 @@
             e.preventDefault();
 
             const name = document.getElementById('signupName').value;
-            const studentId = document.getElementById('signupStudentId').value; // Tarik data Student ID
+            const studentId = document.getElementById('signupStudentId').value;
             const email = document.getElementById('signupEmail').value;
             const password = document.getElementById('signupPassword').value;
 
-            // Validasi Domain Email JIU
             if (!email.endsWith('@jiu.ac')) {
                 alert("Registration failed! Only institutional emails (@jiu.ac) are allowed.");
                 return;
             }
 
-            // Eksekusi Pembuatan Akun
             createUserWithEmailAndPassword(auth, email, password)
                 .then((userCredential) => {
                     const user = userCredential.user;
-
-                    // 1. Update nama di Authentication
                     updateProfile(user, { displayName: name });
 
-                    // 2. Simpan detail akun ke Realtime Database
                     return set(ref(db, 'users/' + user.uid), {
                         fullName: name,
                         studentID: studentId,
