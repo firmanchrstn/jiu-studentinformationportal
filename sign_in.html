@@ -41,9 +41,9 @@
                     <form id="signinForm">
 
                         <div class="input-group input-with-icon">
-                            <div class="input-label">Student ID or Email</div>
+                            <div class="input-label">Student Email</div>
                             <i class="far fa-user input-icon-left"></i>
-                            <!-- Tambahkan ID signinEmail -->
+                            <!-- ID signinEmail untuk JavaScript -->
                             <input type="email" id="signinEmail" class="input-field" placeholder="e.g. student@jiu.ac"
                                 required>
                         </div>
@@ -51,10 +51,10 @@
                         <div class="input-group input-with-icon">
                             <div class="input-label">
                                 <span>Password</span>
-                                <a href="#">Forgot password?</a>
+                                <a href="auth/help.html">Forgot password?</a>
                             </div>
                             <i class="fas fa-lock input-icon-left"></i>
-                            <!-- Tambahkan ID signinPassword -->
+                            <!-- ID signinPassword untuk JavaScript -->
                             <input type="password" id="signinPassword" class="input-field" placeholder="••••••••"
                                 required>
                             <i class="far fa-eye input-icon-right"></i>
@@ -83,15 +83,17 @@
         </div>
     </div>
 
+    <!-- ── SCRIPT FIREBASE LOGIN ── -->
     <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "firebase/app";
-        import { getAnalytics } from "firebase/analytics";
+        // Import menggunakan URL CDN
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js";
 
+        // Config Firebase yang sudah dikoreksi URL databasenya
         const firebaseConfig = {
             apiKey: "AIzaSyC4aRKlU63TNJ0I3HavjWYMEIY1B73f0Zc",
             authDomain: "jiu-studentinformationportal.firebaseapp.com",
-            databaseURL: "https://jiu-studentinformationportal.web.app",
+            databaseURL: "https://jiu-studentinformationportal-default-rtdb.asia-southeast1.firebasedatabase.app",
             projectId: "jiu-studentinformationportal",
             storageBucket: "jiu-studentinformationportal.firebasestorage.app",
             messagingSenderId: "800309587973",
@@ -101,44 +103,34 @@
 
         // Initialize Firebase
         const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
+        const auth = getAuth(app);
 
-        const signupForm = document.getElementById('signupForm');
+        // Ambil elemen form Sign In
+        const signinForm = document.getElementById('signinForm');
 
-        signupForm.addEventListener('submit', (e) => {
+        signinForm.addEventListener('submit', (e) => {
             e.preventDefault();
 
-            const name = document.getElementById('signupName').value;
-            const studentId = document.querySelector('input[placeholder="SC-2024-XXXX"]').value; // Ambil nilai NIM
-            const email = document.getElementById('signupEmail').value;
-            const password = document.getElementById('signupPassword').value;
+            // Ambil data dari input form Sign In
+            const email = document.getElementById('signinEmail').value;
+            const password = document.getElementById('signinPassword').value;
 
+            // Validasi Domain Email JIU
             if (!email.endsWith('@jiu.ac')) {
-                alert("Registration failed! Only institutional emails (@jiu.ac) are allowed.");
+                alert("Access denied! Please use your institutional email (@jiu.ac) to sign in.");
                 return;
             }
 
-            createUserWithEmailAndPassword(auth, email, password)
-                .then(async (userCredential) => {
-                    const user = userCredential.user;
-                    await updateProfile(user, { displayName: name });
-
-                    // 2. Simpan Data Profil ke Firestore
-                    // Membuat folder 'users' dan menamai dokumennya dengan UID user tersebut
-                    await setDoc(doc(db, "users", user.uid), {
-                        fullName: name,
-                        studentID: studentId,
-                        email: email,
-                        role: "student",
-                        createdAt: new Date()
-                    });
-                })
-                .then(() => {
-                    alert("Account created successfully! You can now log in.");
-                    window.location.href = "sign_in.html";
+            // Eksekusi Login
+            signInWithEmailAndPassword(auth, email, password)
+                .then((userCredential) => {
+                    // Jika login berhasil, langsung arahkan ke Dashboard
+                    window.location.href = "dashboard.html";
                 })
                 .catch((error) => {
-                    alert("Error: " + error.message);
+                    // Jika password salah atau email belum terdaftar
+                    alert("Invalid Email or Password. Please try again.");
+                    console.error(error.message);
                 });
         });
     </script>
